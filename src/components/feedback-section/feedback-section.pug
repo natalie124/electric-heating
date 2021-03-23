@@ -1,0 +1,51 @@
+// Contact section start
+.contact-section.section.fix.bg-image.jarallax(data-bg='images/bg/contact-bg.jpg')
+  .container
+    .row
+      .offset-lg-6.col-lg-6.bg-black
+        .contact-area
+          .row
+            .col
+              .section-title.color-white.text-left.mb-35
+                h2 Оставьте заявку на бесплатный расчет
+                p
+                  | Creating a sustainable future through building preservation, green architecture, and smart design.
+          .contact-form
+            form(action="#")
+              .row.row-5
+                .col-md-6
+                  .contact-form-style
+                    label.visually-hidden(for="feedback-name") Ваше имя
+                    input(name='name', id='feedback-name' placeholder='Your Name*', title="Введите ваше имя", type='text'
+                    required)
+                    .contact-form-error Заполните это поле
+                .col-md-6
+                  .contact-form-style
+                    label.visually-hidden(for="feedback-email") Электронная почта
+                    input(name='email', id='feedback-email', placeholder='Email*', title="Введите ваш email", type='email' required)
+                    .contact-form-error Неправильный email
+                .col-md-6
+                  .contact-form-style
+                    label.visually-hidden(for="feedback-subject") Тема сообщения
+                    input(name='subject', id='feedback-subject', placeholder='Subject*', title="Введите тему сообщения", type='text' required)
+                    .contact-form-error Заполните это поле
+                .col-md-6
+                  .contact-form-style
+                    label.visually-hidden(for="feedback-phone") Номер телефона
+                    input(name='phone', id='feedback-phone', placeholder='Phone*', title="Введите ваше номер телефона" type='tel' required)
+                    .contact-form-error Введите номер телефона
+                .col-md-12
+                  .contact-form-style
+                    label.visually-hidden(for="feedback-message") Сообщение
+                    textarea(name='message', id='feedback-message', placeholder='Type your message here..',  title="Введите сообщение")
+                    .contact-form-error Заполните это поле
+                .col-md-12
+                  .contact-form-style
+                    button.btn.mt-10(type='submit')
+                      span Отправить
+                .col-md-12
+                  .contact-form-style.contact-form-consent
+                    input.visually-hidden(type="checkbox" required id="feedback-consent" name="consent" checked)
+                    label(for="feedback-consent") Я даю согласия на обработку
+                    a.contact-form-consent-link(href="privacy-policy.html", target="_blank") персональных данных
+// Contact section end

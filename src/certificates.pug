@@ -1,0 +1,27 @@
+extends pug/layout
+
+block variables
+  -let title = 'Сертификаты';
+
+block content
+
+  main
+    +title-image-bg-about
+    .demo-text-section.section.pt-95.pt-lg-75.pt-md-65.pt-sm-55.pt-xs-45.pb-95.pb-lg-75.pb-md-65.pb-sm-55.pb-xs-45
+      .container
+        .row
+          .col-12
+            .demo-text
+              p.mb-20
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.
+
+        .row.mt-30
+          .col-lg-4.col-md-6.col-sm-6.mb-30
+            a.fancybox.certificate(href='https://via.placeholder.com/668x800.png?text=Сертификат 1' data-fancybox='certificates')
+              img(src='https://via.placeholder.com/334x400.png?text=Сертификат 1' width='334' height='400' alt='1')
+          .col-lg-4.col-md-6.col-sm-6.mb-30
+            a.fancybox.certificate(href='https://via.placeholder.com/668x800.png?text=Сертификат 2' data-fancybox='certificates')
+              img(src='https://via.placeholder.com/334x400.png?text=Сертификат 2' width='334' height='400' alt='1')
+          .col-lg-4.col-md-6.col-sm-6.mb-30
+            a.fancybox.certificate(href='https://via.placeholder.com/668x800.png?text=Сертификат 3' data-fancybox='certificates')
+              img(src='https://via.placeholder.com/334x400.png?text=Сертификат 3' width='334' height='400' alt='1')

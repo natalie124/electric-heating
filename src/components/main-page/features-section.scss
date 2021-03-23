@@ -1,0 +1,503 @@
+/*-- Features --*/
+.features-section-dark {
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+}
+
+.features-section-dark::before {
+  content: '';
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.85);
+  z-index: -1;
+}
+
+.features-section-dark .triangle {
+  position: relative;
+  z-index: 9;
+}
+
+.features-section-dark .triangle:first-child::before, .features-section-dark .triangle:first-child::after {
+  display: none !important;
+}
+
+.features-section-dark .triangle::before {
+  content: '';
+  position: absolute;
+  display: block !important;
+  top: -60px;
+  left: -40px;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 158px 90px 158px 0;
+  border-color: transparent rgba(17, 17, 17, 0.6) transparent transparent;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .features-section-dark .triangle::before {
+    top: -60px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .features-section-dark .triangle::before {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .features-section-dark .triangle::before {
+    display: none !important;
+  }
+}
+
+.features-section-dark .triangle::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -60px;
+  right: -650px;
+  z-index: -2;
+  height: 200%;
+  width: 1000px;
+  background-color: rgba(17, 17, 17, 0.6);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .features-section-dark .triangle::after {
+    right: -730px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .features-section-dark .triangle::after {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .features-section-dark .triangle::after {
+    display: none !important;
+  }
+}
+
+/* Single Features CSS */
+.single-features {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single-features.service-style {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.single-features.service-style .content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid rgba(18, 33, 50, 0.1);
+}
+
+.single-features.service-style .content p {
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 767px) {
+  .single-features.service-style .content p {
+    line-height: 1.5;
+  }
+}
+
+.single-features .icon {
+  background-color: #111111;
+}
+
+.single-features .icon::before, .single-features .icon::after {
+  background-color: #111111;
+}
+
+.single-features .icon i {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 767px) {
+  .single-features .icon i {
+    font-size: 30px;
+  }
+}
+
+.single-features .content {
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
+  max-width: 75%;
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .single-features .content {
+    padding: 0 8px;
+  }
+}
+
+.single-features .content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid rgba(18, 33, 50, 0.1);
+}
+
+.single-features .content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid rgba(18, 33, 50, 0.1);
+}
+
+@media only screen and (max-width: 767px) {
+  .single-features .content p {
+    line-height: 1.5;
+  }
+}
+
+/* Feature Style Two CSS */
+.feature-wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.feature-wrap::before {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+  z-index: 9;
+}
+
+.feature-wrap .feature-style-2 {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fbd232;
+  padding: 30px 120px 20px 20px;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .feature-wrap .feature-style-2 {
+    padding: 30px 90px 0px 20px;
+  }
+}
+
+.feature-wrap .feature-style-2::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 430px 170px 430px 0;
+  border-color: transparent;
+  border-right-color: #fbd232;
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+@media only screen and (max-width: 767px) {
+  .feature-wrap .feature-style-2::before {
+    border-width: 370px 140px 370px 0;
+  }
+}
+
+.feature-wrap .feature-style-2 .content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.feature-wrap .feature-style-2 .content p {
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .feature-wrap .feature-style-2 .content p {
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .feature-wrap .feature-style-2 .content p {
+    line-height: 20px;
+  }
+}
+
+.feature-wrap .feature-style-2 .features-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 1;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.feature-wrap .feature-style-2 .features-icon i {
+  font-size: 45px;
+  color: #1d2634;
+}
+
+/* Feature Style Three CSS */
+.feature-style-3 {
+  text-align: center;
+  position: relative;
+  z-index: 9;
+}
+
+.feature-style-3 .features-icon i {
+  font-size: 80px;
+  color: #fbd232;
+}
+
+.feature-style-3 .content h3 {
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.feature-style-3 .content p {
+  padding: 0 15px;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .feature-style-3 .content p {
+    padding: 0;
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .feature-style-3 .content p {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .feature-style-3 .content p {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+/* feature Style Four */
+.single-feature-four {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #e8e8e8;
+  padding: 30px 25px 30px 45px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .single-feature-four {
+    padding: 20px 15px 20px 35px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .single-feature-four {
+    padding: 20px 15px 20px 35px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four {
+    padding: 20px;
+  }
+}
+
+.single-feature-four::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: -75%;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .single-feature-four::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four::before {
+    display: none;
+  }
+}
+
+.single-feature-four::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 430px 0 430px 170px;
+  border-color: transparent transparent transparent #ddd;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four::after {
+    display: none;
+  }
+}
+
+.single-feature-four .feature-icon {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.single-feature-four .feature-icon i {
+  font-size: 70px;
+  color: #1d2634;
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four .feature-icon i {
+    font-size: 40px;
+  }
+}
+
+.single-feature-four .feature-content {
+  margin-left: 80px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .single-feature-four .feature-content {
+    margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .single-feature-four .feature-content {
+    margin-left: 70px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four .feature-content {
+    margin-left: 15px;
+  }
+}
+
+.single-feature-four .feature-content h3 {
+  font-size: 18px;
+  text-align: left;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .single-feature-four .feature-content h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four .feature-content h3 {
+    font-size: 14px;
+  }
+}
+
+.single-feature-four .feature-content p {
+  line-height: 22px;
+}
+
+.single-feature-four:hover {
+  background-color: #111111;
+}
+
+.single-feature-four:hover::before {
+  background-color: #fbd232;
+}
+
+.single-feature-four:hover::after {
+  border-left-color: #fbd232;
+}
+
+@media only screen and (max-width: 479px) {
+  .single-feature-four:hover .feature-icon i {
+    color: #ffffff;
+  }
+}
+
+.single-feature-four:hover .feature-content h3 {
+  color: #ffffff;
+}
+
+.single-feature-four:hover .feature-content h3 a:hover {
+  color: #ffffff;
+}
+
+.single-feature-four:hover .feature-content p {
+  color: #ffffff;
+}

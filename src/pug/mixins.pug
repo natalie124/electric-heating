@@ -1,0 +1,77 @@
+mixin svg( name, width, height )
+  svg( width=("" + width) height=("" + height) aria-hidden="true" )
+    use( xlink:href=("#" + name) )
+
+mixin img-svg( name, width, height, alt )
+  img( src="img/" + name + ".svg" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-jpg( name, width, height, alt )
+  img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-png( name, width, height, alt )
+  img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-jpg-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x")
+    img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-png-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x")
+    img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin title-image-bg
+  // Breadcrumb Section Start
+  .breadcrumb-section.section.bg-image.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45(data-bg='images/bg/page_heading_bg01.jpg')
+    .container
+      .row.align-items-center
+        .col-md-12
+          ul.pagination
+            li.pagination-item
+              a.pagination-link(href="main.html") Главная
+            li.pagination-item
+              span.pagination-text !{title}
+      .row.align-items-center
+        .col-md-12
+          .breadcrumb-title
+            h1 !{title}
+  // Breadcrumb Section End
+
+mixin title-image-bg-about
+  // Breadcrumb Section Start
+  .breadcrumb-section.section.bg-image.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45(data-bg='images/bg/page_heading_bg01.jpg')
+    .container
+      .row.align-items-center
+        .col-md-12
+          ul.pagination
+            li.pagination-item
+              a.pagination-link(href="main.html") Главная
+            li.pagination-item
+              a.pagination-link(href="about.html") О нас
+            li.pagination-item
+              span.pagination-text !{title}
+      .row.align-items-center
+        .col-md-12
+          .breadcrumb-title
+            h1 !{title}
+  // Breadcrumb Section End
+
+mixin title-big-image-bg( pageTitle )
+  // Breadcrumb Section Start
+  .breadcrumb-section.section.bg-image.overlay.pt-50.pt-md-50.pb-100.pb-md-100.pt-sm-50.pb-sm-70.pt-xs-50.pb-xs-50(data-bg='images/bg/about_page_title_bg.jpg')
+    .container
+      .row.align-items-center
+        .col-md-12
+          ul.pagination
+            li.pagination-item
+              a.pagination-link(href="main.html") Главная
+            li.pagination-item
+              span.pagination-text !{title}
+      .row.align-items-center
+        .col-md-12
+          .breadcrumb-title.pt-80.pt-xs-0.pb-80.pb-xs-0
+            h1.text-center !{pageTitle}
+  // Breadcrumb Section End
+
+

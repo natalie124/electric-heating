@@ -1,0 +1,187 @@
+// Header section start
+header.header.header-transparent.header-sticky.d-lg-block.d-none
+  .header-middle
+    .container
+      .row.align-items-center
+        .col-lg-4
+          // Logo Start
+          .logo
+            a(href='main.html')
+              img(src='https://via.placeholder.com/120x78/fff.png?text=Лого', alt="Логотип" width="120" height="78")
+            span.logo-description Системы кабельного электрообогрева
+          // Logo End
+        .col-lg-8
+          // Header Middle Right Start
+          .header-middle-right
+            .row
+              .col-lg-9
+                .emergncy-contact-area
+                  .row
+                    .col-sm-7.col-lg-7.pl-45.pl-md-70
+                      .single-emergncy-contact
+                        .icon
+                          i.fa.fa-phone
+                        .content
+                          h3
+                            a( href="mailto:info@thememove.com" ) info@thememove.com
+                          span Электронная почта
+                    .col-sm-5.col-lg-5
+                      .single-emergncy-contact
+                        .icon
+                          i.fa.fa-envelope-o
+                        .content
+                          h3
+                            a( href="tel:177597377" ) 1-775-97-377
+                          span Пн-Пт с 9:00 до 18:00
+
+              .col-lg-3.d-flex.align-items-center.p-0
+                button.btn.header-callback-btn(type="button")  Перезвоните мне
+                  i.fa.fa-angle-double-right
+
+          // Header Middle Right End
+
+  .header-bottom.menu-right
+    .container
+      .row
+        // Menu start
+        .col-12.d-flex
+          nav.main-menu
+            ul
+              li
+                a(href='service.html') Электрообогрев домов, квартир, и дач
+
+              li
+                a(href='service.html') Промышленный электрообогрев
+
+              li
+                a(href='services.html') Наши услуги
+                  <i class="fa fa-angle-down"></i>
+                ul.sub-menu
+                  li.tag-new
+                    a(href='services.html') Наши услуги
+                  li.has-dropdown
+                    a(href='services.html') Наши услуги
+                    ul.sub-menu
+                      li
+                        a(href='service.html') Layout 1
+                      li
+                        a(href='service.html') Layout 2
+                  li
+                    a(href='404.html') 404
+                  li
+                    a(href='site-maintenance.html') Site Maintenance
+              li
+                a(href='accessories.html') Комплектующие
+
+              li
+                a(href='about.html') О нас
+                  <i class="fa fa-angle-down"></i>
+                ul.sub-menu
+                  li
+                    a(href='about.html') О нас
+                  li
+                    a(href='company.html') О компании
+                  li
+                    a(href='contacts.html') Контакты
+                  li
+                    a(href='payment.html') Условия оплаты
+                  li
+                    a(href='partners.html') Бренды-партнеры
+                  li
+                    a(href='certificates.html') Сертификаты
+
+
+        // Menu end
+// Header section end
+
+// mobile header area
+.mobile-header-area.d-block.d-lg-none
+  .container
+    .row.align-items-center
+      .col-6
+        // logo
+        .logo
+          a(href='index.html')
+            img.img-fluid(src='images/logo.png', alt='')
+      .col-6.d-flex.align-items-center.justify-content-end
+        button.btn.mobile-header-callback-btn(type="button")
+          span.visually-hidden Перезвоните мне
+          i.fa.fa-phone
+
+        // mobile menu
+        #mobile-menu-trigger.mobile-navigation-icon
+          i
+// End of mobile header area
+// offcanvas mobile menu
+#mobile-menu-overlay.offcanvas-mobile-menu.d-block.d-lg-none
+  a#mobile-menu-close-trigger.offcanvas-menu-close(href='javascript:void(0)')
+    i.fa.fa-times
+  .offcanvas-wrapper
+    .offcanvas-inner-content
+      nav.offcanvas-navigation
+        ul
+          li.menu-item-has-children
+            a(href='index.html#') Электрообогрев домов, квартир, и дач
+          li.menu-item-has-children
+            a(href='index.html#') Промышленный электрообогрев
+          li.menu-item-has-children
+            a(href='index.html#') Наши услуги
+            ul.submenu2
+              li
+                a(href='cost-calculator.html') Cost Calculator
+              li.menu-item-has-children
+                a(href='about.html') About Us
+                ul.submenu2
+                  li
+                    a(href='about.html') Layout 1
+                  li
+                    a(href='about-2.html') Layout 2
+              li
+                a(href='team.html') Our Team
+              li
+                a(href='faq.html') FAQ
+              li
+                a(href='404.html') 404
+              li
+                a(href='site-maintenance.html') Site Maintenance
+              li.menu-item-has-children
+                a(href='index.html#') Page TiItle Variants
+                ul.submenu2
+                  li
+                    a(href='single-color-background.html') Single Color Background
+                  li
+                    a(href='image-background.html') Image Background
+                  li
+                    a(href='big-image-background.html') Big Image Background
+          li.menu-item-has-children
+            a(href='index.html#') Комплектующие
+          li.menu-item-has-children
+            a(href='index.html#') О нас
+            ul.submenu2
+              li
+                a(href='shop.html') Shop
+              li
+                a(href='full-width-shop.html') Full Width Shop Layout
+              li
+                a(href='cart.html') Cart
+              li
+                a(href='checkout.html') Checkout
+              li
+                a(href='my-account.html') My Account
+              li
+                a(href='product-details.html') Product Details
+
+      .offcanvas-widget-area
+        .off-canvas-contact-widget
+          .header-contact-info
+            ul.header-contact-info__list
+              li
+                i.ion-android-phone-portrait
+                a(href='tel://12452456012') 1-775-97-377
+                span Пн-Пт с 9:00 до 18:00
+              li
+                i.ion-android-mail
+                a(href='mailto:info@thememove.com') info@thememove.com
+
+// End of offcanvas mobile menu
+

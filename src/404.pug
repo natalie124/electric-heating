@@ -1,0 +1,21 @@
+extends pug/layout
+
+block variables
+  -let title = "404";
+
+block content
+
+  main
+    // 404 Section Start
+    .404-section.section.bg-gray.pt-95.pt-lg-75.pt-md-65.pt-sm-55.pt-xs-45.pb-100.pb-lg-80.pb-md-70.pb-sm-60.pb-xs-50
+      .container
+        .row
+          .col-12
+            .error-area
+              h2 404
+              h3 Page not found
+              p Whoops, sorry, this page does not exist.
+              a.btn(href='404.html#') Go back home
+    // 404 Section End
+
+    include components/cta-section/cta-section
