@@ -129,7 +129,6 @@
 
   &:hover::before,
   &:focus::before {
-    background-color: #d2d2d2;
     background-color: #333333;
   }
 
@@ -149,17 +148,29 @@
   }
 }
 
-.contact-form-consent-link {
+.contact-form-consent.dark label {
+  color: #333333;
+}
+
+.contact-form-consent a {
   font-size: 13px;
   color: #d2d2d2;
   text-decoration: underline;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.contact-form-consent.dark a {
+  color: #333333;
 }
 
 .contact-form-consent input:checked + label {
-  &::before,
   &::before {
     background-color: #d2d2d2;
-    background-color: #333333;
   }
   &::after {
     opacity: 1;

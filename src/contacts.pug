@@ -6,3 +6,78 @@ block variables
 block content
 
   main
+    +title-image-bg-about
+    // Contact Section Start
+    .contact-section.section.pt-100.pt-lg-80.pt-md-70.pt-sm-60.pt-xs-50.pb-100.pb-lg-80.pb-md-70.pb-sm-60.pb-xs-50
+      .container
+        .row
+          .col-lg-4
+            .emergncy-contact-two
+              .single-emergncy-contact.icon-black.content-black.mb-30
+                .pentagon-icon.contact-icon
+                  .icon
+                    i.fa.fa-phone
+                .content
+                  h3
+                    a( href="tel:177597377" ) 1-775-97-377
+                  span Наш телефон
+              .single-emergncy-contact.icon-black.content-black.mb-30
+                .pentagon-icon.contact-icon
+                  .icon
+                    i.fa.fa-home
+                .content
+                  h3 14 Tottenham Court Road
+                  span London, England.
+              .single-emergncy-contact.icon-black.content-black.mb-30
+                .pentagon-icon.contact-icon
+                  .icon
+                    i.fa.fa-envelope-o
+                .content
+                  h3
+                    a( href="mailto:info@thememove.com" ) info@thememove.com
+                  span Электронная почта
+              .single-emergncy-contact.icon-black.content-black.mb-30
+                .pentagon-icon.contact-icon
+                  .icon
+                    i.fa.fa-clock-o
+                .content
+                  h3 с 9:00 до 18:00
+                  span Часы работы
+          .col-lg-8
+            .row.mb-30
+              .col-12
+                .ymap-container.bg-image(data-bg='images/map/yandex-before-load-marker.png')
+                  .loader.loader-default
+                  #map-yandex
+            .row
+              .col-12
+                .contact-form-wrap
+                  form#contact-form(action='#', method='post')
+                    .row
+                      .col-md-12
+                        .contact-form-style.mb-20
+                          label.visually-hidden(for="contact-form-name") Ваше имя
+                          input(name='name', id='contact-form-name' placeholder='Ваше имя*', title="Введите ваше имя", type='text'
+                    required)
+                          .contact-form-error Заполните это поле
+                      .col-md-12
+                        .contact-form-style.mb-20
+                          label.visually-hidden(for="contact-form-email") Электронная почта
+                          input(name='email', id='contact-form-email', placeholder='Электронная почта*', title="Введите ваш email", type='email' required)
+                          .contact-form-error Неправильный email
+                      .col-md-12
+                        .contact-form-style
+                          label.visually-hidden(for="contact-form-message") Сообщение
+                          textarea(name='message', id='contact-form-message', placeholder='Type your message here..',  title="Введите сообщение")
+                          .contact-form-error Заполните это поле
+                      .col-md-12
+                        .contact-form-style.contact-form-consent.dark
+                          input.visually-hidden(type="checkbox" required id="contact-form-consent" name="consent" checked)
+                          label(for="contact-form-consent") Я даю согласия на обработку
+                          a(href="privacy-policy.html", target="_blank") персональных данных
+                        .contact-form-style
+                          button.btn(type="submit")
+                            span Send message
+                  p.form-messege
+    // Contact Section End
+
