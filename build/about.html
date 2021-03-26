@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/vendor/helper.css">
   <link rel="stylesheet" href="css/plugins/plugins.css">
-  <link rel="stylesheet" href="css/style.css"><!-- Modernizr JS -->
+  <link rel="stylesheet" href="css/style.min.css"><!-- Modernizr JS -->
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
@@ -40,7 +40,7 @@
                           <div class="single-emergncy-contact">
                             <div class="icon"><i class="fa fa-phone"></i></div>
                             <div class="content">
-                              <h3><a href="mailto:info@thememove.com">info@thememove.com</a></h3><span>Электронная почта</span>
+                              <p><a href="mailto:info@thememove.com">info@thememove.com</a></p><span>Электронная почта</span>
                             </div>
                           </div>
                         </div>
@@ -48,14 +48,14 @@
                           <div class="single-emergncy-contact">
                             <div class="icon"><i class="fa fa-envelope-o"></i></div>
                             <div class="content">
-                              <h3><a href="tel:177597377">1-775-97-377</a></h3><span>Пн-Пт с 9:00 до 18:00</span>
+                              <p><a href="tel:177597377">1-775-97-377</a></p><span>Пн-Пт с 9:00 до 18:00</span>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 d-flex align-items-center p-0"><button class="btn header-callback-btn" type="button"> Перезвоните мне<i class="fa fa-angle-double-right"></i></button></div>
+                  <div class="col-lg-3 d-flex align-items-center p-0"><button class="btn header-callback-btn _popup-btn" type="button" data-popup="_popup-callback"> Перезвоните мне<i class="fa fa-angle-double-right"></i></button></div>
                 </div>
               </div><!-- Header Middle Right End-->
             </div>
@@ -81,7 +81,7 @@
                         </ul>
                       </li>
                       <li><a href="404.html">404</a></li>
-                      <li><a href="site-maintenance.html">Site Maintenance</a></li>
+                      <li><a href="service.html">Карточка услуги</a></li>
                     </ul>
                   </li>
                   <li><a href="accessories.html">Комплектующие</a></li>
@@ -110,7 +110,7 @@
             <!-- logo-->
             <div class="logo"><a href="index.html"><img class="img-fluid" src="images/logo.png" alt=""></a></div>
           </div>
-          <div class="col-6 d-flex align-items-center justify-content-end"><button class="btn mobile-header-callback-btn" type="button"><span class="visually-hidden">Перезвоните мне</span><i class="fa fa-phone"></i></button><!-- mobile menu-->
+          <div class="col-6 d-flex align-items-center justify-content-end"><button class="btn mobile-header-callback-btn _popup-btn" type="button" data-popup="_popup-callback"><span class="visually-hidden">Перезвоните мне</span><i class="fa fa-phone"></i></button><!-- mobile menu-->
             <div class="mobile-navigation-icon" id="mobile-menu-trigger"><i></i></div>
           </div>
         </div>
@@ -197,10 +197,14 @@
       <div class="service-section section pt-90 pt-lg-70 pt-md-30 pt-sm-45 pt-xs-40 pb-70 pb-lg-50 pb-md-40 pb-sm-30 pb-xs-20">
         <div class="container-fluid pl-30 pr-30">
           <div class="row">
+            <h2 class="visually-hidden">Список разделов</h2>
             <div class="col-lg-4 col-md-6 col-sm-6">
               <!-- Single Service Start-->
               <div class="single-service mb-30">
-                <div class="service-image"><img src="images/service/service-1.jpg" alt="1" width="440" height="223"></div>
+                <div class="service-image">
+                  <picture>
+                    <source type="image/webp" srcset="images/webp/service/service-1.webp" /><img src="images/service/service-1.jpg" width="440" height="223" alt="1" /></picture>
+                </div>
                 <div class="service-icon pentagon-icon">
                   <div class="icon"><i class="rn-renovation"></i></div>
                   <h3><a href="company.html">О компании</a></h3>
@@ -214,7 +218,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <!-- Single Service Start-->
               <div class="single-service mb-30">
-                <div class="service-image"><img src="images/service/service-2.jpg" alt="1" width="440" height="223"></div>
+                <div class="service-image">
+                  <picture>
+                    <source type="image/webp" srcset="images/webp/service/service-2.webp" /><img src="images/service/service-2.jpg" width="440" height="223" alt="1" /></picture>
+                </div>
                 <div class="service-icon pentagon-icon">
                   <div class="icon"><i class="rn-electrical"></i></div>
                   <h3><a href="contacts.html">Контакты</a></h3>
@@ -228,7 +235,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <!-- Single Service Start-->
               <div class="single-service mb-30">
-                <div class="service-image"><img src="images/service/service-3.jpg" alt="1" width="440" height="223"></div>
+                <div class="service-image">
+                  <picture>
+                    <source type="image/webp" srcset="images/webp/service/service-3.webp" /><img src="images/service/service-3.jpg" width="440" height="223" alt="1" /></picture>
+                </div>
                 <div class="service-icon pentagon-icon">
                   <div class="icon"><i class="rn-painting"></i></div>
                   <h3><a href="partners.html">Бренды-партнеры</a></h3>
@@ -242,7 +252,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <!-- Single Service Start-->
               <div class="single-service mb-30">
-                <div class="service-image"><img src="images/service/service-4.jpg" alt="1" width="440" height="223"></div>
+                <div class="service-image">
+                  <picture>
+                    <source type="image/webp" srcset="images/webp/service/service-4.webp" /><img src="images/service/service-4.jpg" width="440" height="223" alt="1" /></picture>
+                </div>
                 <div class="service-icon pentagon-icon">
                   <div class="icon"><i class="rn-plumbing"></i></div>
                   <h3><a href="certificates.html">Сертификаты</a></h3>
@@ -256,7 +269,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <!-- Single Service Start-->
               <div class="single-service mb-30">
-                <div class="service-image"><img src="images/service/service-5.jpg" alt="1" width="440" height="223"></div>
+                <div class="service-image">
+                  <picture>
+                    <source type="image/webp" srcset="images/webp/service/service-5.webp" /><img src="images/service/service-5.jpg" width="440" height="223" alt="1" /></picture>
+                </div>
                 <div class="service-icon pentagon-icon">
                   <div class="icon"><i class="rn-heating"></i></div>
                   <h3><a href="payment.html">Условия оплаты</a></h3>
@@ -294,7 +310,7 @@
             </div><!-- Footer Widget end-->
             <!-- Footer Widget start-->
             <div class="footer-widget col-lg-3 col-md-6 col-sm-12 col-12 mb-30">
-              <h4 class="title"><span class="text">Контакты</span></h4>
+              <h2 class="title"><span class="text">Контакты</span></h2>
               <ul>
                 <li><i class="fa fa-map-marker"></i><span><a href="contacts.html">14 Tottenham Road, London, England.</a></span></li>
                 <li><i class="fa fa-phone"></i><span><a href="tel:10266668888"> (102) 6666 8888</a></span></li>
@@ -304,22 +320,22 @@
             </div><!-- Footer Widget end-->
             <!-- Footer Widget start-->
             <div class="footer-widget col-lg-5 col-md-12 col-sm-12 col-12 mb-30">
-              <h4 class="title"><span class="text">Меню</span></h4>
+              <h2 class="title"><span class="text">Меню</span></h2>
               <div class="footer-menu">
                 <div class="row">
                   <div class="col-lg-5 col-md-5">
-                    <h5 class="footer-menu-title"><a href="#">Главная</a></h5>
-                    <h5 class="footer-menu-title"><a href="#">О нас</a></h5>
+                    <p class="footer-menu-title"><a href="#">Главная</a></p>
+                    <p class="footer-menu-title"><a href="#">О нас</a></p>
                     <ul class="footer-menu">
                       <li><a href="#">Контакты</a></li>
                       <li><a href="#">Партнеры</a></li>
                       <li><a href="#">Сертификаты</a></li>
                       <li><a href="#">О компании</a></li>
                     </ul>
-                    <h5 class="footer-menu-title"><a href="#">Комплектующие</a></h5>
+                    <p class="footer-menu-title"><a href="#">Комплектующие</a></p>
                   </div>
                   <div class="col-lg-7 col-md-7">
-                    <h5 class="footer-menu-title"><a href="#">Услуги</a></h5>
+                    <p class="footer-menu-title"><a href="#">Услуги</a></p>
                     <ul class="footer-menu">
                       <li><a href="#">Тёплый пол</a></li>
                       <li><a href="#">Обогрев дорог, шоссе, пешеходных переходов</a></li>
@@ -358,11 +374,89 @@
         </div>
       </div><!-- Footer bottom end-->
     </footer><!-- Footer section end-->
+    <div class="popup _popup-callback">
+      <div class="popup__body">
+        <div class="popup__content bg-black"><button class="popup__close close-popup" type="button" title="Закрыть окно"></button>
+          <div class="contact-form pt-30 pb-30 pl-30 pr-30 _form">
+            <form action="https://jsonplaceholder.typicode.com/users">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="popup__title mb-20">Заказать обратный звонок</h2>
+                  <p class="popup__text mb-30">Оставьте заявку, и наш специалист свяжется с Вами в ближайшее время</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="contact-form-style mb-10"><input name="phone" id="callback-form-phone" placeholder="Телефон*" title="Телефон" type="tel" required><label class="visually-hidden" for="callback-form-phone">Телефон</label><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-form-style mb-10"><input name="email" id="callback-form-email" placeholder="Email*" title="Email" type="email" required><label class="visually-hidden" for="callback-form-email">Email</label><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-form-style mb-10"><input name="name" id="callback-form-name" placeholder="Имя" title="Имя" type="text"><label class="visually-hidden" for="callback-form-name">Имя</label><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-form-style contact-form-consent"><input class="visually-hidden" type="checkbox" id="callback-consent" name="consent" checked required><label for="callback-consent">Я даю согласия на обработку</label><a class="contact-form-consent-link" href="privacy-policy.html" target="_blank">персональных данных</a><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-form-style"><button class="btn mt-10" type="submit">Отправить</button></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup _popup-request">
+      <div class="popup__body">
+        <div class="popup__content bg-black"><button class="popup__close close-popup" type="button" title="Закрыть окно"></button>
+          <div class="contact-form pt-30 pb-30 pl-30 pr-30 _form">
+            <form action="https://jsonplaceholder.typicode.com/users">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="popup__title mb-20">Заказать заявку на проект за 24 часа</h2>
+                  <p class="popup__text mb-30">Оставьте заявку, и наш специалист свяжется с Вами в ближайшее время</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="contact-form-style mb-10"><input name="phone" id="request-24-form-phone" placeholder="Телефон*" title="Телефон" type="tel" required><label class="visually-hidden" for="request-24-form-phone">Телефон</label><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-form-style mb-10"><input name="email" id="request-24-form-email" placeholder="Email*" title="Email" type="email" required><label class="visually-hidden" for="request-24-form-email">Email</label><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="contact-form-style mb-10"><input name="name" id="request-24-form-name" placeholder="Имя" title="Имя" type="text"><label class="visually-hidden" for="request-24-form-name">Имя</label><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-form-style contact-form-consent"><input class="visually-hidden" type="checkbox" id="request-24-consent" name="consent" checked required><label for="request-24-consent">Я даю согласия на обработку</label><a class="contact-form-consent-link" href="privacy-policy.html" target="_blank">персональных данных</a><span class="error-msg"></span></div>
+                </div>
+                <div class="col-md-12">
+                  <div class="contact-form-style"><button class="btn mt-10" type="submit">Отправить</button></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup _popup-success">
+      <div class="popup__body">
+        <div class="popup__content bg-black"><button class="popup__close close-popup" type="button" title="Закрыть окно"></button>
+          <div class="contact-form pt-60 pb-30 pl-40 pr-40">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="popup__title mb-20 text-center">Ваша заявка отправлена.</h2>
+                <p class="popup__text mb-30 text-center">В ближайшее время вам перезвонит менеджер.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="js/vendor/jquery-3.6.0.min.js"></script>
-  <script src="js/vendor/popper.min.js"></script>
   <script src="js/vendor/bootstrap.min.js"></script>
-  <script src="js/vendor/jquery.fancybox.min.js"></script>
   <script src="js/plugins/plugins.js"></script>
   <script src="js/main.js"></script>
 </body>

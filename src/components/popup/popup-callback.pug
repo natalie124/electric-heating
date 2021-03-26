@@ -1,0 +1,35 @@
+.popup._popup-callback
+  .popup__body
+    .popup__content.bg-black
+      button.popup__close.close-popup(type="button" title="Закрыть окно")
+      .contact-form.pt-30.pb-30.pl-30.pr-30._form
+        form(action='https://jsonplaceholder.typicode.com/users')
+          .row
+            .col-md-12
+              h2.popup__title.mb-20 Заказать обратный звонок
+              p.popup__text.mb-30 Оставьте заявку, и наш специалист свяжется с Вами в ближайшее время
+          .row
+            .col-md-6
+              .contact-form-style.mb-10
+                input(name='phone', id="callback-form-phone", placeholder='Телефон*', title="Телефон" type='tel' required)
+                label.visually-hidden(for="callback-form-phone") Телефон
+                span.error-msg
+            .col-md-6
+              .contact-form-style.mb-10
+                input(name='email', id="callback-form-email", placeholder='Email*', title="Email" type='email' required)
+                label.visually-hidden(for="callback-form-email") Email
+                span.error-msg
+            .col-md-6
+              .contact-form-style.mb-10
+                input(name='name', id="callback-form-name", placeholder='Имя', title="Имя" type='text')
+                label.visually-hidden(for="callback-form-name") Имя
+                span.error-msg
+            .col-md-12
+              .contact-form-style.contact-form-consent
+                input.visually-hidden(type="checkbox" id="callback-consent" name="consent" checked required)
+                label(for="callback-consent") Я даю согласия на обработку
+                a.contact-form-consent-link(href="privacy-policy.html", target="_blank") персональных данных
+                span.error-msg
+            .col-md-12
+              .contact-form-style
+                button.btn.mt-10(type='submit') Отправить

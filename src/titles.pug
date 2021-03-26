@@ -1,0 +1,71 @@
+extends pug/component-layout
+
+block variables
+  -let title = "Заголовки h1";
+
+block content
+
+  // Breadcrumb Section Start
+  .breadcrumb-section.section.bg-image.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45(data-bg='images/bg/page_heading_bg01.jpg')
+    .container
+      .row.align-items-center
+        .col-md-12
+          ul.pagination
+            li.pagination-item
+              a.pagination-link(href="main.html") Главная
+            li.pagination-item
+              span.pagination-text Эта страница
+      .row.align-items-center
+        .col-md-12
+          .breadcrumb-title
+            h1 Заголовок h1
+  // Breadcrumb Section End
+
+
+  // Breadcrumb Section Start
+  .breadcrumb-section.section.bg-image.overlay.pt-50.pt-md-50.pb-100.pb-md-100.pt-sm-50.pb-sm-70.pt-xs-50.pb-xs-50(data-bg='images/bg/about_page_title_bg.jpg')
+    .container
+      .row.align-items-center
+        .col-md-12
+          ul.pagination
+            li.pagination-item
+              a.pagination-link(href="main.html") Главная
+            li.pagination-item
+              span.pagination-text Эта страница
+      .row.align-items-center
+        .col-md-12
+          .breadcrumb-title.pt-80.pt-xs-0.pb-80.pb-xs-0
+            h1.text-center Заголовок h1
+  // Breadcrumb Section End
+
+  .hero-section.section.position-relative
+    .hero-item.bg-image(data-bg='images/hero/hero-3.jpg')
+      .container
+        .row.align-items-center
+          .col-md-12
+            ul.pagination
+              li.pagination-item
+                a.pagination-link(href="main.html") Главная
+              li.pagination-item
+                a.pagination-link(href="services.html") Наши услуги
+              li.pagination-item
+                span.pagination-text Теплый пол
+        .row
+          .col-12
+            // Hero Content start
+            .hero-content-2
+              +picture-png-webp('hero/home01-slide01', 281, 239, 'slide', 'left-img')
+
+              .hero-content-wrapper
+                h1
+                  span.sm-size.tx-uppercase Электрический <br> кабельный
+                  span.sm-size.white.tx-uppercase теплый пол
+                p
+                  span.tx-uppercase Проектирование
+                  span.tx-uppercase Изготовление
+                  span.tx-uppercase Доставка
+
+                a.btn.tx-uppercase._anchor-link(href='request-form')
+                  | Узнать стоимость проекта
+                  i.fa.fa-angle-double-right
+

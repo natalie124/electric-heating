@@ -1,0 +1,39 @@
+include mixins
+
+block variables
+- let mainTitle = "Системы электрообогрева";
+- let description = "Проектирование, изготовление, доставка";
+
+doctype html
+html.no-js( lang="ru" )
+  head
+    meta( charset="UTF-8" )
+    meta( http-equiv="x-ua-compatible" content="ie=edge")
+    title #{mainTitle} !{title && "| " + title}
+    meta( name="description" content= "" + description )
+    meta( name="viewport" content="width=device-width, initial-scale=1.0" )
+    <!-- Place favicon.ico in the root directory -->
+    <link href="images/favicon.ico" type="img/x-icon" rel="shortcut icon">
+    <!-- All css files are included here. -->
+    link( rel="stylesheet" href="css/vendor/bootstrap.min.css")
+    link( rel="stylesheet" href="css/vendor/iconfont.min.css")
+    link( rel="stylesheet" href="css/vendor/jquery.fancybox.min.css")
+    link( rel="stylesheet" href="css/vendor/helper.css")
+    link( rel="stylesheet" href="css/plugins/plugins.css")
+    link( rel="stylesheet" href="css/style.min.css")
+    <!-- Modernizr JS -->
+    script( src="js/vendor/modernizr-2.8.3.min.js")
+
+  body
+
+    //- .sprite(style="display:none")
+    //-   include ../../build/images/sprite.svg
+
+    #main-wrapper
+
+      block content
+
+    script( src="js/vendor/jquery-3.6.0.min.js" )
+    script( src="js/vendor/bootstrap.min.js")
+    script( src="js/plugins/plugins.js")
+    script( src="js/main.js")

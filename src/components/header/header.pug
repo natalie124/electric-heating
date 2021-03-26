@@ -22,7 +22,7 @@ header.header.header-transparent.header-sticky.d-lg-block.d-none
                         .icon
                           i.fa.fa-phone
                         .content
-                          h3
+                          p
                             a( href="mailto:info@thememove.com" ) info@thememove.com
                           span Электронная почта
                     .col-sm-5.col-lg-5
@@ -30,12 +30,12 @@ header.header.header-transparent.header-sticky.d-lg-block.d-none
                         .icon
                           i.fa.fa-envelope-o
                         .content
-                          h3
+                          p
                             a( href="tel:177597377" ) 1-775-97-377
                           span Пн-Пт с 9:00 до 18:00
 
               .col-lg-3.d-flex.align-items-center.p-0
-                button.btn.header-callback-btn(type="button")  Перезвоните мне
+                button.btn.header-callback-btn._popup-btn(type="button", data-popup="_popup-callback")  Перезвоните мне
                   i.fa.fa-angle-double-right
 
           // Header Middle Right End
@@ -69,7 +69,7 @@ header.header.header-transparent.header-sticky.d-lg-block.d-none
                   li
                     a(href='404.html') 404
                   li
-                    a(href='site-maintenance.html') Site Maintenance
+                    a(href='service.html') Карточка услуги
               li
                 a(href='accessories.html') Комплектующие
 
@@ -104,7 +104,7 @@ header.header.header-transparent.header-sticky.d-lg-block.d-none
           a(href='index.html')
             img.img-fluid(src='images/logo.png', alt='')
       .col-6.d-flex.align-items-center.justify-content-end
-        button.btn.mobile-header-callback-btn(type="button")
+        button.btn.mobile-header-callback-btn._popup-btn(type="button" data-popup="_popup-callback")
           span.visually-hidden Перезвоните мне
           i.fa.fa-phone
 

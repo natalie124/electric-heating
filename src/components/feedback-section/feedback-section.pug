@@ -1,4 +1,3 @@
-// Contact section start
 .contact-section.section.fix.bg-image.jarallax(data-bg='images/bg/contact-bg.jpg')
   .container
     .row
@@ -10,42 +9,42 @@
                 h2 Оставьте заявку на бесплатный расчет
                 p
                   | Creating a sustainable future through building preservation, green architecture, and smart design.
-          .contact-form
-            form(action="#")
+          .contact-form._form._anchor(data-anchor="request-form")
+            form(action='https://jsonplaceholder.typicode.com/users')
               .row.row-5
                 .col-md-6
-                  .contact-form-style
-                    label.visually-hidden(for="feedback-name") Ваше имя
-                    input(name='name', id='feedback-name' placeholder='Your Name*', title="Введите ваше имя", type='text'
-                    required)
-                    .contact-form-error Заполните это поле
+                  .contact-form-style.mb-10
+                    input(name='phone', id="request-form-phone", placeholder='Телефон*', title="Телефон" type='tel' required)
+                    label.visually-hidden(for="request-form-phone") Телефон
+                    span.error-msg
                 .col-md-6
-                  .contact-form-style
-                    label.visually-hidden(for="feedback-email") Электронная почта
-                    input(name='email', id='feedback-email', placeholder='Email*', title="Введите ваш email", type='email' required)
-                    .contact-form-error Неправильный email
+                  .contact-form-style.mb-10
+                    input(name='email', id="request-form-email", placeholder='Email*', title="Email" type='email' required)
+                    label.visually-hidden(for="request-form-email") Email
+                    span.error-msg
                 .col-md-6
-                  .contact-form-style
-                    label.visually-hidden(for="feedback-subject") Тема сообщения
-                    input(name='subject', id='feedback-subject', placeholder='Subject*', title="Введите тему сообщения", type='text' required)
-                    .contact-form-error Заполните это поле
+                  .contact-form-style.mb-10
+                    input(name='name', id="request-form-name", placeholder='Имя', title="Имя" type='text')
+                    label.visually-hidden(for="request-form-name") Имя
+                    span.error-msg
                 .col-md-6
-                  .contact-form-style
-                    label.visually-hidden(for="feedback-phone") Номер телефона
-                    input(name='phone', id='feedback-phone', placeholder='Phone*', title="Введите ваше номер телефона" type='tel' required)
-                    .contact-form-error Введите номер телефона
+                  .contact-form-style.mb-10
+                    input(name='subject', id="request-form-subject", placeholder='Тема обращения', title="Тема обращения" type='text')
+                    label.visually-hidden(for="request-form-subject") Темя обращения
+                    span.error-msg
+
                 .col-md-12
                   .contact-form-style
-                    label.visually-hidden(for="feedback-message") Сообщение
-                    textarea(name='message', id='feedback-message', placeholder='Type your message here..',  title="Введите сообщение")
-                    .contact-form-error Заполните это поле
-                .col-md-12
-                  .contact-form-style
-                    button.btn.mt-10(type='submit')
-                      span Отправить
+                    textarea(name='message', id="request-form-message", placeholder='Напишите свое сообщение...', title='Напишите свое сообщение...')
+                    label.visually-hidden(for="request-form-message") Сообщение
+                    span.error-msg
                 .col-md-12
                   .contact-form-style.contact-form-consent
-                    input.visually-hidden(type="checkbox" required id="feedback-consent" name="consent" checked)
-                    label(for="feedback-consent") Я даю согласия на обработку
+                    input.visually-hidden(type="checkbox" id="request-consent" name="consent" checked required)
+                    label(for="request-consent") Я даю согласия на обработку
                     a.contact-form-consent-link(href="privacy-policy.html", target="_blank") персональных данных
+                    span.error-msg
+                .col-md-12
+                  .contact-form-style
+                    button.btn.mt-10(type='submit') Отправить
 // Contact section end

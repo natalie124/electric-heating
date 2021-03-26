@@ -20,7 +20,7 @@ html.no-js( lang="ru" )
     link( rel="stylesheet" href="css/vendor/jquery.fancybox.min.css")
     link( rel="stylesheet" href="css/vendor/helper.css")
     link( rel="stylesheet" href="css/plugins/plugins.css")
-    link( rel="stylesheet" href="css/style.css")
+    link( rel="stylesheet" href="css/style.min.css")
     <!-- Modernizr JS -->
     script( src="js/vendor/modernizr-2.8.3.min.js")
 
@@ -37,10 +37,11 @@ html.no-js( lang="ru" )
 
       include ../components/footer/footer
 
-    script( src="js/vendor/jquery-3.6.0.min.js" )
+      include ../components/popup/popup-callback
+      include ../components/popup/popup-request
+      include ../components/popup/popup-success
 
-    script( src="js/vendor/popper.min.js")
+    script( src="js/vendor/jquery-3.6.0.min.js" )
     script( src="js/vendor/bootstrap.min.js")
-    script( src="js/vendor/jquery.fancybox.min.js")
     script( src="js/plugins/plugins.js")
     script( src="js/main.js")

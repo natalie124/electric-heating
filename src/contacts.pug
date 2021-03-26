@@ -18,7 +18,7 @@ block content
                   .icon
                     i.fa.fa-phone
                 .content
-                  h3
+                  p
                     a( href="tel:177597377" ) 1-775-97-377
                   span Наш телефон
               .single-emergncy-contact.icon-black.content-black.mb-30
@@ -26,14 +26,14 @@ block content
                   .icon
                     i.fa.fa-home
                 .content
-                  h3 14 Tottenham Court Road
+                  p 14 Tottenham Court Road
                   span London, England.
               .single-emergncy-contact.icon-black.content-black.mb-30
                 .pentagon-icon.contact-icon
                   .icon
                     i.fa.fa-envelope-o
                 .content
-                  h3
+                  p
                     a( href="mailto:info@thememove.com" ) info@thememove.com
                   span Электронная почта
               .single-emergncy-contact.icon-black.content-black.mb-30
@@ -41,43 +41,41 @@ block content
                   .icon
                     i.fa.fa-clock-o
                 .content
-                  h3 с 9:00 до 18:00
+                  p с 9:00 до 18:00
                   span Часы работы
           .col-lg-8
             .row.mb-30
               .col-12
-                .ymap-container.bg-image(data-bg='images/map/yandex-before-load-marker.png')
-                  .loader.loader-default
-                  #map-yandex
+                include components/yandex-map/yandex-map
             .row
               .col-12
-                .contact-form-wrap
-                  form#contact-form(action='#', method='post')
+                .contact-form-wrap._form
+                  form(action='https://jsonplaceholder.typicode.com/users')
                     .row
                       .col-md-12
                         .contact-form-style.mb-20
                           label.visually-hidden(for="contact-form-name") Ваше имя
-                          input(name='name', id='contact-form-name' placeholder='Ваше имя*', title="Введите ваше имя", type='text'
-                    required)
+                          input(name='name', id='contact-form-name' placeholder='Ваше имя', title="Введите ваше имя", type='text')
+                          span.error-msg
                           .contact-form-error Заполните это поле
                       .col-md-12
                         .contact-form-style.mb-20
                           label.visually-hidden(for="contact-form-email") Электронная почта
-                          input(name='email', id='contact-form-email', placeholder='Электронная почта*', title="Введите ваш email", type='email' required)
-                          .contact-form-error Неправильный email
+                          input(name='email', id='contact-form-email', placeholder='Электронная почта*', title="Введите ваш email", type='email' required data-msg="Пожалуйста, проверьте ваш e-mail")
+                          span.error-msg
                       .col-md-12
                         .contact-form-style
                           label.visually-hidden(for="contact-form-message") Сообщение
                           textarea(name='message', id='contact-form-message', placeholder='Type your message here..',  title="Введите сообщение")
-                          .contact-form-error Заполните это поле
+                          span.error-msg
                       .col-md-12
                         .contact-form-style.contact-form-consent.dark
                           input.visually-hidden(type="checkbox" required id="contact-form-consent" name="consent" checked)
                           label(for="contact-form-consent") Я даю согласия на обработку
                           a(href="privacy-policy.html", target="_blank") персональных данных
+                          span.error-msg
                         .contact-form-style
                           button.btn(type="submit")
                             span Send message
-                  p.form-messege
     // Contact Section End
 

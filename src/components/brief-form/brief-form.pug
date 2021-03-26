@@ -1,0 +1,19 @@
+.contact-form.section.bg-image.pt-70.pl-80.pb-70.pr-80._form(data-bg='images/bg/work-bg.jpg')
+  form(action='https://jsonplaceholder.typicode.com/users', data-file-url='files/file.pdf')
+    .container
+      .row
+        .col-12
+          .section-title.text-center.mb-35
+            h2 Скачать бриф для расчета
+            p
+              | From complete turn key to project manager. Leave the building to the professionals.
+          .row
+            .col-md-9.pr-md-0.pr-xs-15
+              .contact-form-style.mb-20
+                label.visually-hidden(for="contact-form-email") E-mail
+                input._req(name='email', id='contact-form-email', placeholder='E-mail*', title='Введите ваш e-mail', type='email' required data-msg="Пожалуйста, проверьте ваш e-mail")
+                span.error-msg
+            .col-md-3.pl-md-0.pl-xs-15
+              .contact-form-style.mb-20
+                button.btn.btn-fluid._file(type='submit')
+                  span Скачать
