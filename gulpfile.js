@@ -33,11 +33,12 @@ gulp.task('clean', function() {
 gulp.task('copy', function() {
   return gulp.src([
       'src/fonts/*',
+      'src/files/*',
       'src/images/**/*',
       'src/js/vendor/*.js',
       'src/js/plugins/*.js',
       'src/css/vendor/*.css',
-      'src/css/plugins/*.css'
+      'src/css/plugins/*.css',
     ], {
       base: 'src'
     })
