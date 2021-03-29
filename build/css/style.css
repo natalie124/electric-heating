@@ -8664,7 +8664,7 @@ textarea:focus::placeholder {
 
 .errorMessage {
   position: absolute;
-  top: calc(100% + 20px);
+  top: calc(100% + 15px);
   left: 0;
   z-index: 10;
   display: none;
@@ -8676,17 +8676,16 @@ textarea:focus::placeholder {
           align-items: center;
   padding: 15px 20px 15px 60px;
   max-width: 100%;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.2;
   color: #ffffff;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   background-color: #ff1313;
+  background-color: rgba(255, 19, 19, 0.8);
   border-radius: 15px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-box-shadow: 4px 5px 5px 0px #111111;
+          box-shadow: 4px 5px 5px 0px #111111;
   -webkit-animation: fadeInFromNone 0.3s ease-out;
           animation: fadeInFromNone 0.3s ease-out;
 }
@@ -8700,16 +8699,17 @@ textarea:focus::placeholder {
 .errorMessage.error::after {
   position: absolute;
   z-index: 0;
-  bottom: 100%;
-  left: 30px;
+  left: 15px;
+  top: -15px;
   content: "";
-  border: 15px solid transparent;
-  border-bottom: 22px solid #ff1313;
-  display: block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ff1313;
+  border-bottom: 15px solid rgba(255, 19, 19, 0.8);
   width: 0;
   height: 0;
-  -webkit-animation: fadeInFromNone 0.3s ease-out;
-          animation: fadeInFromNone 0.3s ease-out;
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
 }
 
 .errorMessage.error::before {
