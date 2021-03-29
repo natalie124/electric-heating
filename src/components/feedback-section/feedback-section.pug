@@ -16,34 +16,34 @@
                   .contact-form-style.mb-10
                     input(name='phone', id="request-form-phone", placeholder='Телефон*', title="Телефон" type='tel' required)
                     label.visually-hidden(for="request-form-phone") Телефон
-                    span.error-msg
+                    span.errorMessage
                 .col-md-6
                   .contact-form-style.mb-10
                     input(name='email', id="request-form-email", placeholder='Email*', title="Email" type='email' required)
                     label.visually-hidden(for="request-form-email") Email
-                    span.error-msg
+                    span.errorMessage
                 .col-md-6
                   .contact-form-style.mb-10
                     input(name='name', id="request-form-name", placeholder='Имя', title="Имя" type='text')
                     label.visually-hidden(for="request-form-name") Имя
-                    span.error-msg
+                    span.errorMessage
                 .col-md-6
                   .contact-form-style.mb-10
                     input(name='subject', id="request-form-subject", placeholder='Тема обращения', title="Тема обращения" type='text')
                     label.visually-hidden(for="request-form-subject") Темя обращения
-                    span.error-msg
+                    span.errorMessage
 
                 .col-md-12
                   .contact-form-style
                     textarea(name='message', id="request-form-message", placeholder='Напишите свое сообщение...', title='Напишите свое сообщение...')
                     label.visually-hidden(for="request-form-message") Сообщение
-                    span.error-msg
+                    span.errorMessage
                 .col-md-12
                   .contact-form-style.contact-form-consent
                     input.visually-hidden(type="checkbox" id="request-consent" name="consent" checked required)
                     label(for="request-consent") Я даю согласия на обработку
                     a.contact-form-consent-link(href="privacy-policy.html", target="_blank") персональных данных
-                    span.error-msg
+                    span.errorMessage
                 .col-md-12
                   .contact-form-style
                     button.btn.mt-10(type='submit') Отправить

@@ -1,0 +1,225 @@
+.project {
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.project .image {
+  display: block;
+  position: relative;
+}
+
+.project .image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.project .img {
+  position: relative;
+  display: block;
+  @include adaptive-size(padding-bottom, 360, 238);
+}
+
+.project .img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.project .daHoverElem {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.project .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px 50px 50px;
+}
+
+.project .content.content-center {
+  top: 50%;
+  bottom: auto;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0;
+}
+
+.project .content .title {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  opacity: 0;
+  -webkit-transform: translateY(-35px);
+      -ms-transform: translateY(-35px);
+          transform: translateY(-35px);
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.project .content .title > a {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #fc9800;
+}
+
+.project .content .category {
+  display: block;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition: .3s ease-out 0s;
+  -o-transition: .3s ease-out 0s;
+  transition: .3s ease-out 0s;
+}
+
+.project .content .category > a {
+  color: #dddddd;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.project .content .category > a:hover {
+  color: #fc9800;
+}
+
+.project .content .work-search-icon {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-45px);
+      -ms-transform: translateY(-45px);
+          transform: translateY(-45px);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.project .content .work-search-icon .icon {
+  width: 30px;
+  height: 45px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.project .content .work-search-icon .icon a {
+  display: block;
+}
+
+.project .content .work-search-icon .icon a i {
+  font-size: 18px;
+  margin-right: 0px;
+  color: #1d2634;
+}
+
+.project:hover .image::before {
+  opacity: 0.7;
+}
+
+.project:hover .daHoverElem {
+  opacity: 0.7;
+}
+
+.project:hover .content {
+  opacity: 1;
+}
+
+.project:hover .content .title {
+  opacity: 1;
+  -webkit-transition: .5s ease-out .3s;
+  -o-transition: .5s ease-out .3s;
+  transition: .5s ease-out .3s;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.project:hover .content .category {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: .5s ease-out .3s;
+  -o-transition: .5s ease-out .3s;
+  transition: .5s ease-out .3s;
+}
+
+.project:hover .content .category a:hover {
+  color: #fc9800;
+}
+
+.project:hover .content .work-search-icon {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/*-- Project Information --*/
+.project-information {
+  background-color: #1d2634;
+  padding: 30px 35px;
+}
+
+.project-information h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.project-information ul li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.project-information ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+.project-information ul li strong {
+  width: 80px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}

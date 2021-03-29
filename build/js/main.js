@@ -10,6 +10,8 @@ $body = $('body');
     Menu Sticky
 -----------------------------------*/
 var sticky = $('.header-sticky');
+var menuBtnSticky = $('.mobile-navigation-icon');
+
 
 windows.on('scroll', function() {
     var scroll = windows.scrollTop();
@@ -19,6 +21,15 @@ windows.on('scroll', function() {
     }else{
         sticky.addClass('is-sticky');
         sticky.addClass('lock-padding');
+    }
+});
+
+windows.on('scroll', function() {
+    var scroll = windows.scrollTop();
+    if (scroll < 200) {
+        menuBtnSticky.removeClass('is-sticky');
+    }else{
+        menuBtnSticky.addClass('is-sticky');
     }
 });
 
@@ -111,18 +122,21 @@ windows.on('scroll', function() {
               breakpoint: 992,
               settings: {
                   slidesToShow: 2,
+                  slidesToScroll: 2,
               }
           },
           {
               breakpoint: 768,
               settings: {
                   slidesToShow: 2,
+                  slidesToScroll: 2,
               }
           },
           {
               breakpoint: 575,
               settings: {
                   slidesToShow: 1,
+                  slidesToScroll: 1,
               }
           },
       ]
@@ -201,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // функции обработки ошибок
 
   function formAddError(input) {
-    var msg = input.parentElement.querySelector('.error-msg');
+    var msg = input.parentElement.querySelector('.errorMessage');
 
     input.parentElement.classList.add('error');
     input.classList.add('error');
@@ -218,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function formRemoveError(input) {
-    var msg = input.parentElement.querySelector('.error-msg');
+    var msg = input.parentElement.querySelector('.errorMessage');
 
     input.parentElement.classList.remove('error');
     input.classList.remove('error');
@@ -526,6 +540,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     myMapTemp.geoObjects.add(myPlacemarkTemp);
+
+    myMapTemp.behaviors.disable('scrollZoom');
+
+    if (window.screen.width <= 768) {
+      myMapTemp.behaviors.disable('drag');
+    }
+
 
     //Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
     var layer = myMapTemp.layers.get(0).get(0);

@@ -7,19 +7,18 @@
   <title>Системы электрообогрева | Наши услуги</title>
   <meta name="description" content="Проектирование, изготовление, доставка">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Place favicon.ico in the root directory -->
-  <link href="images/favicon.ico" type="img/x-icon" rel="shortcut icon">
-  <!-- All css files are included here. -->
+  <link href="images/favicon.ico" type="img/x-icon" rel="icon">
+  <link href="images/favicon.ico" type="img/x-icon" rel="shortcut icon"><!-- All css files are included here. -->
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
   <link rel="stylesheet" href="css/vendor/iconfont.min.css">
   <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/vendor/helper.css">
   <link rel="stylesheet" href="css/plugins/plugins.css">
-  <link rel="stylesheet" href="css/style.min.css"><!-- Modernizr JS -->
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <div id="main-wrapper">
+  <div class="site-wrapper" id="main-wrapper">
     <!-- Header section start-->
     <header class="header header-transparent header-sticky d-lg-block d-none">
       <div class="header-middle">
@@ -111,7 +110,7 @@
             <div class="logo"><a href="index.html"><img class="img-fluid" src="images/logo.png" alt=""></a></div>
           </div>
           <div class="col-6 d-flex align-items-center justify-content-end"><button class="btn mobile-header-callback-btn _popup-btn" type="button" data-popup="_popup-callback"><span class="visually-hidden">Перезвоните мне</span><i class="fa fa-phone"></i></button><!-- mobile menu-->
-            <div class="mobile-navigation-icon" id="mobile-menu-trigger"><i></i></div>
+            <div class="mobile-navigation-icon" id="mobile-menu-trigger" title="Открыть меню"><i></i></div>
           </div>
         </div>
       </div>
@@ -404,16 +403,16 @@
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <div class="contact-form-style mb-10"><input name="phone" id="callback-form-phone" placeholder="Телефон*" title="Телефон" type="tel" required><label class="visually-hidden" for="callback-form-phone">Телефон</label><span class="error-msg"></span></div>
+                  <div class="contact-form-style mb-10"><input name="phone" id="callback-form-phone" placeholder="Телефон*" title="Телефон" type="tel" required><label class="visually-hidden" for="callback-form-phone">Телефон</label><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-6">
-                  <div class="contact-form-style mb-10"><input name="email" id="callback-form-email" placeholder="Email*" title="Email" type="email" required><label class="visually-hidden" for="callback-form-email">Email</label><span class="error-msg"></span></div>
+                  <div class="contact-form-style mb-10"><input name="email" id="callback-form-email" placeholder="Email*" title="Email" type="email" required><label class="visually-hidden" for="callback-form-email">Email</label><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-6">
-                  <div class="contact-form-style mb-10"><input name="name" id="callback-form-name" placeholder="Имя" title="Имя" type="text"><label class="visually-hidden" for="callback-form-name">Имя</label><span class="error-msg"></span></div>
+                  <div class="contact-form-style mb-10"><input name="name" id="callback-form-name" placeholder="Имя" title="Имя" type="text"><label class="visually-hidden" for="callback-form-name">Имя</label><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-12">
-                  <div class="contact-form-style contact-form-consent"><input class="visually-hidden" type="checkbox" id="callback-consent" name="consent" checked required><label for="callback-consent">Я даю согласия на обработку</label><a class="contact-form-consent-link" href="privacy-policy.html" target="_blank">персональных данных</a><span class="error-msg"></span></div>
+                  <div class="contact-form-style contact-form-consent"><input class="visually-hidden" type="checkbox" id="callback-consent" name="consent" checked required><label for="callback-consent">Я даю согласия на обработку</label><a class="contact-form-consent-link" href="privacy-policy.html" target="_blank">персональных данных</a><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-12">
                   <div class="contact-form-style"><button class="btn mt-10" type="submit">Отправить</button></div>
@@ -437,16 +436,16 @@
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <div class="contact-form-style mb-10"><input name="phone" id="request-24-form-phone" placeholder="Телефон*" title="Телефон" type="tel" required><label class="visually-hidden" for="request-24-form-phone">Телефон</label><span class="error-msg"></span></div>
+                  <div class="contact-form-style mb-10"><input name="phone" id="request-24-form-phone" placeholder="Телефон*" title="Телефон" type="tel" required><label class="visually-hidden" for="request-24-form-phone">Телефон</label><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-6">
-                  <div class="contact-form-style mb-10"><input name="email" id="request-24-form-email" placeholder="Email*" title="Email" type="email" required><label class="visually-hidden" for="request-24-form-email">Email</label><span class="error-msg"></span></div>
+                  <div class="contact-form-style mb-10"><input name="email" id="request-24-form-email" placeholder="Email*" title="Email" type="email" required><label class="visually-hidden" for="request-24-form-email">Email</label><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-6">
-                  <div class="contact-form-style mb-10"><input name="name" id="request-24-form-name" placeholder="Имя" title="Имя" type="text"><label class="visually-hidden" for="request-24-form-name">Имя</label><span class="error-msg"></span></div>
+                  <div class="contact-form-style mb-10"><input name="name" id="request-24-form-name" placeholder="Имя" title="Имя" type="text"><label class="visually-hidden" for="request-24-form-name">Имя</label><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-12">
-                  <div class="contact-form-style contact-form-consent"><input class="visually-hidden" type="checkbox" id="request-24-consent" name="consent" checked required><label for="request-24-consent">Я даю согласия на обработку</label><a class="contact-form-consent-link" href="privacy-policy.html" target="_blank">персональных данных</a><span class="error-msg"></span></div>
+                  <div class="contact-form-style contact-form-consent"><input class="visually-hidden" type="checkbox" id="request-24-consent" name="consent" checked required><label for="request-24-consent">Я даю согласия на обработку</label><a class="contact-form-consent-link" href="privacy-policy.html" target="_blank">персональных данных</a><span class="errorMessage"></span></div>
                 </div>
                 <div class="col-md-12">
                   <div class="contact-form-style"><button class="btn mt-10" type="submit">Отправить</button></div>
@@ -471,7 +470,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div><!-- Modernizr JS -->
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="js/vendor/jquery-3.6.0.min.js"></script>
   <script src="js/vendor/bootstrap.min.js"></script>
   <script src="js/plugins/plugins.js"></script>

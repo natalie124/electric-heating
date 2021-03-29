@@ -13,23 +13,23 @@
               .contact-form-style.mb-10
                 input(name='phone', id="callback-form-phone", placeholder='Телефон*', title="Телефон" type='tel' required)
                 label.visually-hidden(for="callback-form-phone") Телефон
-                span.error-msg
+                span.errorMessage
             .col-md-6
               .contact-form-style.mb-10
                 input(name='email', id="callback-form-email", placeholder='Email*', title="Email" type='email' required)
                 label.visually-hidden(for="callback-form-email") Email
-                span.error-msg
+                span.errorMessage
             .col-md-6
               .contact-form-style.mb-10
                 input(name='name', id="callback-form-name", placeholder='Имя', title="Имя" type='text')
                 label.visually-hidden(for="callback-form-name") Имя
-                span.error-msg
+                span.errorMessage
             .col-md-12
               .contact-form-style.contact-form-consent
                 input.visually-hidden(type="checkbox" id="callback-consent" name="consent" checked required)
                 label(for="callback-consent") Я даю согласия на обработку
                 a.contact-form-consent-link(href="privacy-policy.html", target="_blank") персональных данных
-                span.error-msg
+                span.errorMessage
             .col-md-12
               .contact-form-style
                 button.btn.mt-10(type='submit') Отправить

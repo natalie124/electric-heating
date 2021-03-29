@@ -38,16 +38,12 @@
   transition: all 0.8s ease 0s;
 }
 .popup__content {
- /* background-color: #fff;*/
- /*background-color: rgba(0, 0, 0, 0.9);*/
- /* color: #000;*/
   max-width: 800px;
-  /*padding: 30px;*/
   position: relative;
   transition: all 0.8s ease 0s;
   opacity: 0;
   transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
-  box-shadow: 6px 6px #1d2634, 12px 12px #fbd232;
+  box-shadow: 6px 6px #1d2634, 12px 12px #fc9800;
 }
 .popup__content_image {
   padding: 0;
@@ -72,7 +68,7 @@
   &:focus {
     &::before,
     &::after {
-      background-color: #fbd232;
+      background-color: #fc9800;
     }
   }
 
@@ -98,9 +94,7 @@
   }
 }
 .popup__title {
-  color: #fbd232;
-  /*font-size: 40px;
-  margin: 0px 0px 1em 0px;*/
+  color: #fc9800;
 }
 .popup__text {
   color: #d2d2d2;

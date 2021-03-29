@@ -1,0 +1,3 @@
+@mixin adaptive-size($property, $basicSize, $targetSize) {
+  #{$property}: calc((#{$targetSize} * 100%) / #{$basicSize});
+}

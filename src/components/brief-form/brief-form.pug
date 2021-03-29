@@ -1,4 +1,4 @@
-.contact-form.section.bg-image.pt-70.pl-80.pb-70.pr-80._form(data-bg='images/bg/work-bg.jpg')
+.contact-form.section.bg-image.pt-70.pl-80.pb-70.pr-80.pl-sm-30.pr-sm-30.pl-xs-15.pr-xs-15._form(data-bg='images/bg/work-bg.jpg')
   form(action='https://jsonplaceholder.typicode.com/users', data-file-url='files/file.pdf')
     .container
       .row
@@ -12,7 +12,7 @@
               .contact-form-style.mb-20
                 label.visually-hidden(for="contact-form-email") E-mail
                 input._req(name='email', id='contact-form-email', placeholder='E-mail*', title='Введите ваш e-mail', type='email' required data-msg="Пожалуйста, проверьте ваш e-mail")
-                span.error-msg
+                span.errorMessage
             .col-md-3.pl-md-0.pl-xs-15
               .contact-form-style.mb-20
                 button.btn.btn-fluid._file(type='submit')

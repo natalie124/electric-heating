@@ -38,7 +38,7 @@
     font-size: 18px;
     line-height: 1.2;
     font-weight: 700;
-    color: #fbd232;
+    color: #fc9800;
 
     @media (max-width: 1199px) {
       font-size: 16px;
@@ -69,7 +69,7 @@
   left: 0;
   width: 20px;
   height: 2px;
-  background-color: #fbd232;
+  background-color: #fc9800;
 }
 
 .footer-widget .title::after {
@@ -79,7 +79,7 @@
   bottom: 0;
   width: calc(100% - 30px);
   left: 30px;
-  background-color: #fbd232;
+  background-color: #fc9800;
 }
 
 .footer-widget .title .text {
@@ -136,7 +136,7 @@
 }
 
 .footer-widget ul li a:hover {
-  color: #fbd232;
+  color: #fc9800;
 }
 
 p.footer-menu-title {
@@ -186,5 +186,5 @@ p.footer-menu-title {
 }
 
 .copyright p a:hover {
-  color: #fbd232;
+  color: #fc9800;
 }

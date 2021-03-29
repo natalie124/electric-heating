@@ -47,7 +47,7 @@
 
 .clasic-service-content .title {
   font-size: 36px;
-  color: #fbd232;
+  color: #fc9800;
   line-height: 1.2;
   font-weight: 700;
   text-align: left;
@@ -134,7 +134,7 @@
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
   .clasic-service-list-content .title {
-    margin-bottom: 20x;
+    margin-bottom: 20px;
   }
 }
 
@@ -429,7 +429,7 @@
   width: 3px;
   position: absolute;
   left: 0;
-  background-color: #fbd232;
+  background-color: #fc9800;
 }
 
 .clasic-service-section-three-link {
@@ -543,7 +543,7 @@
 }
 
 .single-service::after {
-  background-color: #fbd232;
+  background-color: #fc9800;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: scale3d(0.8, 0.8, 1);
@@ -581,14 +581,14 @@
 }
 
 .single-service .service-icon .icon {
-  background-color: #fbd232;
+  background-color: #fc9800;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 10px;
 }
 
 .single-service .service-icon .icon::before, .single-service .service-icon .icon::after {
-  background-color: #fbd232;
+  background-color: #fc9800;
 }
 
 .single-service .service-icon .icon i {
@@ -839,7 +839,7 @@
 
 .single-service-two .service-icon-wrap h3 {
   display: block;
-  background-color: #fbd232;
+  background-color: #fc9800;
   width: 75%;
   text-align: right;
   margin-bottom: 0;
@@ -961,7 +961,7 @@
   font-size: 16px;
   font-weight: 700;
   padding: 16px 20px;
-  background: #fbd232;
+  background: #fc9800;
   margin: 0;
 }
 
@@ -1057,7 +1057,7 @@
 }
 
 .service-table.theme-color table th {
-  background-color: #fbd232;
+  background-color: #fc9800;
   color: #ffffff;
 }
 
@@ -1167,7 +1167,7 @@
 .single-pricing .price-head h4 {
   font-size: 18px;
   color: #ffffff;
-  background-color: #fbd232;
+  background-color: #fc9800;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -1215,7 +1215,7 @@
   border-top: none;
   padding: 20px 0;
   color: #1d2634;
-  background-color: #fbd232;
+  background-color: #fc9800;
   font-family: "Montserrat", sans-serif;
 }
 
