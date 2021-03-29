@@ -387,6 +387,7 @@ header.header.is-sticky .main-menu.main-menu-two {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .main-menu > ul > li {
@@ -398,7 +399,7 @@ header.header.is-sticky .main-menu.main-menu-two {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   text-transform: uppercase;
   display: block;
   padding-top: 27px;

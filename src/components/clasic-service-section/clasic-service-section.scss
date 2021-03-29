@@ -236,6 +236,7 @@
 .clasic-service-section-three {
   position: relative;
   z-index: 999;
+  overflow-x: hidden;
 }
 
 .clasic-service-section-three.simple-bg {
@@ -1216,7 +1217,7 @@
   padding: 20px 0;
   color: #1d2634;
   background-color: #fc9800;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .single-pricing .price-footer a i {
