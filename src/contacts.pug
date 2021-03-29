@@ -56,23 +56,23 @@ block content
                         .contact-form-style.mb-20
                           label.visually-hidden(for="contact-form-name") Ваше имя
                           input(name='name', id='contact-form-name' placeholder='Ваше имя', title="Введите ваше имя", type='text')
-                           span.errorMessage
+                          span.errorMessage
                       .col-md-12
                         .contact-form-style.mb-20
                           label.visually-hidden(for="contact-form-email") Электронная почта
                           input(name='email', id='contact-form-email', placeholder='Электронная почта*', title="Введите ваш email", type='email' required data-msg="Пожалуйста, проверьте ваш e-mail")
-                           span.errorMessage
+                          span.errorMessage
                       .col-md-12
                         .contact-form-style
                           label.visually-hidden(for="contact-form-message") Сообщение
                           textarea(name='message', id='contact-form-message', placeholder='Type your message here..',  title="Введите сообщение")
-                           span.errorMessage
+                          span.errorMessage
                       .col-md-12
                         .contact-form-style.contact-form-consent.dark
                           input.visually-hidden(type="checkbox" required id="contact-form-consent" name="consent" checked)
                           label(for="contact-form-consent") Я даю согласия на обработку
                           a(href="privacy-policy.html", target="_blank") персональных данных
-                           span.errorMessage
+                          span.errorMessage
                         .contact-form-style
                           button.btn(type="submit")
                             span Send message

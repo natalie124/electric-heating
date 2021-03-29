@@ -8684,8 +8684,8 @@ textarea:focus::placeholder {
   background-color: #ff1313;
   background-color: rgba(255, 19, 19, 0.8);
   border-radius: 15px;
-  -webkit-box-shadow: 4px 5px 5px 0px #111111;
-          box-shadow: 4px 5px 5px 0px #111111;
+  -webkit-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.5);
   -webkit-animation: fadeInFromNone 0.3s ease-out;
           animation: fadeInFromNone 0.3s ease-out;
 }
