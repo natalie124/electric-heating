@@ -2317,6 +2317,12 @@ header.header.is-sticky .main-menu.main-menu-two {
   margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 991px) {
+  .hero-content-2 p {
+    font-size: 16px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .hero-content-2 p {
     display: -webkit-inline-box;
