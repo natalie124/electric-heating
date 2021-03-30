@@ -6,70 +6,70 @@ block variables
 block content
 
   main
-    //- .hero-section.section.position-relative
-    //-   .hero-item.bg-image(data-bg='images/hero/hero-3.jpg')
-    //-     .container
-    //-       .row.align-items-center
-    //-         .col-md-12
-    //-           ul.pagination
-    //-             li.pagination-item
-    //-               a.pagination-link(href="main.html") Главная
-    //-             li.pagination-item
-    //-               a.pagination-link(href="services.html") Наши услуги
-    //-             li.pagination-item
-    //-               span.pagination-text Теплый пол
-    //-       .row
-    //-         .col-12
-    //-           // Hero Content start
-    //-           .hero-content-2
-    //-             +picture-png-webp('hero/home01-slide01', 281, 239, 'slide', 'left-img')
+    .hero-section.section.position-relative
+      .hero-item.bg-image(data-bg='images/hero/hero-3.jpg')
+        .container
+          .row.align-items-center
+            .col-md-12
+              ul.pagination
+                li.pagination-item
+                  a.pagination-link(href="main.html") Главная
+                li.pagination-item
+                  a.pagination-link(href="services.html") Наши услуги
+                li.pagination-item
+                  span.pagination-text Теплый пол
+          .row
+            .col-12
+              // Hero Content start
+              .hero-content-2
+                +picture-png-webp('hero/home01-slide01', 281, 239, 'slide', 'left-img')
 
-    //-             .hero-content-wrapper
-    //-               h1
-    //-                 span.sm-size.tx-uppercase Электрический <br> кабельный
-    //-                 span.sm-size.white.tx-uppercase теплый пол
-    //-               p
-    //-                 span.tx-uppercase Проектирование
-    //-                 span.tx-uppercase Изготовление
-    //-                 span.tx-uppercase Доставка
+                .hero-content-wrapper
+                  h1
+                    span.sm-size.tx-uppercase Электрический <br> кабельный
+                    span.sm-size.white.tx-uppercase теплый пол
+                  p
+                    span.tx-uppercase Проектирование
+                    span.tx-uppercase Изготовление
+                    span.tx-uppercase Доставка
 
-    //-               a.btn.tx-uppercase._anchor-link(href='request-form')
-    //-                 | Узнать стоимость проекта
-    //-                 i.fa.fa-angle-double-right
+                  a.btn.tx-uppercase._anchor-link(href='request-form')
+                    | Узнать стоимость проекта
+                    i.fa.fa-angle-double-right
 
-    //- include components/cta-section/cta-section
-    //- include components/service-details/service-details
+    include components/cta-section/cta-section
+    include components/service-details/service-details
 
         // Clasic Service section start
-    //- .clasic-service-section.section.bg-dark-three
-    //-   .row.no-gutters.align-items-center
-    //-     .col-xl-6.col-lg-12
-    //-       .clasic-service-image
-    //-         +picture-jpg-webp('service/clasic-service', 720, 450, 'image', '')
-    //-     .col-xl-4.col-lg-12
-    //-       .clasic-service-content
-    //-         h2.title We Are Professional &amp; Thoughful HandyMan
-    //-         p
-    //-           | Everyhome owner has a list of renovation, home repair, or home improvement projects he or she needs done &mdash; both interior and exterior. Sometimes that list can get quite long, too! The bathrooms that needs updating. The garbage disposal that&rsquo;s on the fritz. The basement that needs drywall repairs. But with today&rsquo;s busy lifestyles, who has the time or the patience to do it all yourself? Let us help your home run more smoothly with a wide range of affordable repair, improvement and remodel services.
-    //-         a.btn.white-hover(href='#')
-    //-           | FIND OUT MORE
-    //-           i.fa.fa-angle-double-right
-    //-     .col-xl-2.d-xl-block.d-none
-    //- // Clasic Service section end
+    .clasic-service-section.section.bg-dark-three
+      .row.no-gutters.align-items-center
+        .col-xl-6.col-lg-12
+          .clasic-service-image
+            +picture-jpg-webp('service/clasic-service', 720, 450, 'image', '')
+        .col-xl-4.col-lg-12
+          .clasic-service-content
+            h2.title We Are Professional &amp; Thoughful HandyMan
+            p
+              | Everyhome owner has a list of renovation, home repair, or home improvement projects he or she needs done &mdash; both interior and exterior. Sometimes that list can get quite long, too! The bathrooms that needs updating. The garbage disposal that&rsquo;s on the fritz. The basement that needs drywall repairs. But with today&rsquo;s busy lifestyles, who has the time or the patience to do it all yourself? Let us help your home run more smoothly with a wide range of affordable repair, improvement and remodel services.
+            a.btn.white-hover(href='#')
+              | FIND OUT MORE
+              i.fa.fa-angle-double-right
+        .col-xl-2.d-xl-block.d-none
+    // Clasic Service section end
 
 
-    //- include components/service-details/single-features
-    //- include components/main-page/features-section
-    //- include components/clasic-service-section/clasic-service-section
-    //- include components/brief-form/brief-form
+    include components/service-details/single-features
+    include components/main-page/features-section
+    include components/clasic-service-section/clasic-service-section
+    include components/brief-form/brief-form
     // Work section Title start
-    //- .work-section-title.section.bg-dark-three.jarallax.pt-95.pt-lg-75.pt-md-65.pt-sm-55.pt-xs-45
-    //-   .container
-    //-     .row
-    //-       .col
-    //-         .section-title.color-white.mb-35
-    //-           h2 125 проектов  за 20 лет работы
-    //- include components/project-slider/project-slider
+    .work-section-title.section.bg-dark-three.jarallax.pt-95.pt-lg-75.pt-md-65.pt-sm-55.pt-xs-45
+      .container
+        .row
+          .col
+            .section-title.color-white.mb-35
+              h2 125 проектов  за 20 лет работы
+    include components/project-slider/project-slider
 
     // Work section Title end
 
@@ -134,4 +134,4 @@ block content
 
           // Clasic Service Two section end
 
-    //- include components/feedback-section/feedback-section
+    include components/feedback-section/feedback-section
