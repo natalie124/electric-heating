@@ -1,96 +1,96 @@
 "use strict";
-(function ($) {
-/*--
-Commons Variables
------------------------------------*/
-var windows = $(window),
-$body = $('body');
+(function($) {
+  /*--
+  Commons Variables
+  -----------------------------------*/
+  var windows = $(window),
+    $body = $('body');
 
-/*--
-    Menu Sticky
------------------------------------*/
-var sticky = $('.header-sticky');
-var menuBtnSticky = $('.mobile-navigation-icon');
+  /*--
+      Menu Sticky
+  -----------------------------------*/
+  var sticky = $('.header-sticky');
+  var menuBtnSticky = $('.mobile-navigation-icon');
 
 
-windows.on('scroll', function() {
+  windows.on('scroll', function() {
     var scroll = windows.scrollTop();
     if (scroll < 350) {
-        sticky.removeClass('is-sticky');
-        sticky.removeClass('lock-padding');
-    }else{
-        sticky.addClass('is-sticky');
-        sticky.addClass('lock-padding');
+      sticky.removeClass('is-sticky');
+      sticky.removeClass('lock-padding');
+    } else {
+      sticky.addClass('is-sticky');
+      sticky.addClass('lock-padding');
     }
-});
+  });
 
-windows.on('scroll', function() {
+  windows.on('scroll', function() {
     var scroll = windows.scrollTop();
     if (scroll < 200) {
-        menuBtnSticky.removeClass('is-sticky');
-    }else{
-        menuBtnSticky.addClass('is-sticky');
+      menuBtnSticky.removeClass('is-sticky');
+    } else {
+      menuBtnSticky.addClass('is-sticky');
     }
-});
+  });
 
- /*---------------------------------------------
-               mobile menu active
-    --------------------------------------------*/
+  /*---------------------------------------------
+                mobile menu active
+     --------------------------------------------*/
 
-    $("#mobile-menu-trigger").on('click', function(){
-        $("#mobile-menu-overlay").addClass("active");
-        $body.addClass('no-overflow');
-    });
+  $("#mobile-menu-trigger").on('click', function() {
+    $("#mobile-menu-overlay").addClass("active");
+    $body.addClass('no-overflow');
+  });
 
-    $("#mobile-menu-close-trigger").on('click', function(){
-        $("#mobile-menu-overlay").removeClass("active");
-        $body.removeClass('no-overflow');
-    });
+  $("#mobile-menu-close-trigger").on('click', function() {
+    $("#mobile-menu-overlay").removeClass("active");
+    $body.removeClass('no-overflow');
+  });
 
-    /*------  End of mobile menu active  -------*/
-
-
-
-    /*---------------------------------------------
-               offcanvas mobile menu
-    -----------------------------------------------*/
-
-    var $offCanvasNav = $('.offcanvas-navigation'),
-        $offCanvasNavSubMenu = $offCanvasNav.find('.submenu2');
-
-    /*Add Toggle Button With Off Canvas Sub Menu*/
-    $offCanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i></i></span>');
-
-    /*Close Off Canvas Sub Menu*/
-    $offCanvasNavSubMenu.slideUp();
-
-    /*Category Sub Menu Toggle*/
-    $offCanvasNav.on('click', 'li a, li .menu-expand', function(e) {
-        var $this = $(this);
-        if ( ($this.parent().attr('class').match(/\b(menu-item-has-children|has-children|has-sub-menu)\b/)) && ($this.attr('href') === '#' || $this.hasClass('menu-expand')) ) {
-            e.preventDefault();
-            if ($this.siblings('ul:visible').length){
-                $this.parent('li').removeClass('active');
-                $this.siblings('ul').slideUp();
-            } else {
-                $this.parent('li').addClass('active');
-                $this.closest('li').siblings('li').removeClass('active').find('li').removeClass('active');
-                $this.closest('li').siblings('li').find('ul:visible').slideUp();
-                $this.siblings('ul').slideDown();
-            }
-        }
-    });
+  /*------  End of mobile menu active  -------*/
 
 
-    /*=====  End of offcanvas mobile menu  ======*/
+
+  /*---------------------------------------------
+             offcanvas mobile menu
+  -----------------------------------------------*/
+
+  var $offCanvasNav = $('.offcanvas-navigation'),
+    $offCanvasNavSubMenu = $offCanvasNav.find('.submenu2');
+
+  /*Add Toggle Button With Off Canvas Sub Menu*/
+  $offCanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i></i></span>');
+
+  /*Close Off Canvas Sub Menu*/
+  $offCanvasNavSubMenu.slideUp();
+
+  /*Category Sub Menu Toggle*/
+  $offCanvasNav.on('click', 'li a, li .menu-expand', function(e) {
+    var $this = $(this);
+    if (($this.parent().attr('class').match(/\b(menu-item-has-children|has-children|has-sub-menu)\b/)) && ($this.attr('href') === '#' || $this.hasClass('menu-expand'))) {
+      e.preventDefault();
+      if ($this.siblings('ul:visible').length) {
+        $this.parent('li').removeClass('active');
+        $this.siblings('ul').slideUp();
+      } else {
+        $this.parent('li').addClass('active');
+        $this.closest('li').siblings('li').removeClass('active').find('li').removeClass('active');
+        $this.closest('li').siblings('li').find('ul:visible').slideUp();
+        $this.siblings('ul').slideDown();
+      }
+    }
+  });
+
+
+  /*=====  End of offcanvas mobile menu  ======*/
   /*--
       - Background Image
   ------------------------------------------*/
   var $backgroundImage = $('.bg-image');
   $backgroundImage.each(function() {
-      var $this = $(this),
-          $bgImage = $this.data('bg');
-      $this.css('background-image', 'url('+$bgImage+')');
+    var $this = $(this),
+      $bgImage = $this.data('bg');
+    $this.css('background-image', 'url(' + $bgImage + ')');
   });
 
   /*--
@@ -98,102 +98,101 @@ windows.on('scroll', function() {
   -----------------------------------*/
   // Work Slider
   $('.work-slider-two').slick({
-      infinite: true,
-      arrows: true,
-      dots: false,
-      slidesToShow: 5,
-      slidesToScroll: 3,
-      prevArrow: '<button class="slick-prev" title="Предыдущий слайд"><i class="fa fa-angle-left"></i></button>',
-      nextArrow: '<button class="slick-next" title="Следующий слайд"><i class="fa fa-angle-right"></i></button>',
-      responsive: [
-          {
-              breakpoint: 1501,
-              settings: {
-                  slidesToShow: 4,
-              }
-          },
-          {
-              breakpoint: 1199,
-              settings: {
-                  slidesToShow: 3,
-              }
-          },
-          {
-              breakpoint: 992,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-              }
-          },
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-              }
-          },
-          {
-              breakpoint: 575,
-              settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-              }
-          },
-      ]
+    infinite: true,
+    arrows: true,
+    dots: false,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    prevArrow: '<button class="slick-prev" title="Предыдущий слайд"><i class="fa fa-angle-left"></i></button>',
+    nextArrow: '<button class="slick-next" title="Следующий слайд"><i class="fa fa-angle-right"></i></button>',
+    responsive: [{
+        breakpoint: 1501,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   });
 
 
   /*-------------------------------------
       Direction Aware Hover Effect
   --------------------------------------*/
-  var daHover = function(){
-      $('.daHover').each(function(){
-          $(this).hoverdir({
-              hoverElem : '.daHoverElem'
-          });
+  var daHover = function() {
+    $('.daHover').each(function() {
+      $(this).hoverdir({
+        hoverElem: '.daHoverElem'
       });
+    });
   };
   daHover();
 
   /*---------------------------------
-  	Jarallax Background Activation
+    Jarallax Background Activation
   -----------------------------------*/
   $('.jarallax').jarallax({
-      speed: 0.5,
-      imgPosition: "50% -50%"
+    speed: 0.5,
+    imgPosition: "50% -50%"
   });
 
   /* --------------------------------------------------------
       FAQ Accordion
   * -------------------------------------------------------*/
   $('.card-header a').on('click', function() {
-      $('.card').removeClass('actives');
-      $(this).parents('.card').addClass('actives');
-    });
+    $('.card').removeClass('actives');
+    $(this).parents('.card').addClass('actives');
+  });
 
   /*----------------------------------
       ScrollUp Active
   -----------------------------------*/
   $.scrollUp({
-      scrollText: '<i class="fa fa-angle-up"></i>',
-      easingType: 'linear',
-      scrollSpeed: 900,
-      animation: 'fade'
+    scrollText: '<i class="fa fa-angle-up"></i>',
+    easingType: 'linear',
+    scrollSpeed: 900,
+    animation: 'fade'
   });
 
   /*-----------------------------------
      Scroll to anchor
   -----------------------------------*/
-  $('._anchor-link').click(function(e){
+  $('._anchor-link').click(function(e) {
     e.preventDefault();
     var _href = $(this).attr('href');
     var selector = '._anchor[data-anchor=' + _href + ']';
     var toElem = $(selector);
     var toTop = toElem.offset().top;
     console.log(toTop);
-    $("html, body").animate({scrollTop:toTop  - toElem.height() - 70});
-      return false;
-   });
+    $("html, body").animate({ scrollTop: toTop - toElem.height() - 70 });
+    return false;
+  });
 
   /*-----------------------------------
       Fancybox gallery
@@ -243,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function removeErrors() {
     var invalidInputs = document.querySelectorAll('input.error');
     if (invalidInputs) {
-      invalidInputs.forEach(function(it){
+      invalidInputs.forEach(function(it) {
         formRemoveError(it);
         document.removeEventListener('click', removeErrors);
       });
@@ -259,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // маски
 
   function phoneMask(input) {
-    var mask = IMask( input, {
+    var mask = IMask(input, {
       mask: '+{7}(000)000-00-00',
       minLength: 11
     });
@@ -278,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //функции обработки succsess
 
-  function  onFormSuccess(form) {
+  function onFormSuccess(form) {
     var fileUrl = form.getAttribute('data-file-url');
     if (fileUrl) {
       var link = document.createElement('a');
@@ -315,52 +314,52 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     //обработка формы
     forms.forEach(function(form) {
-    var url = form.getAttribute('action');
-    form.addEventListener('submit', formSend);
+      var url = form.getAttribute('action');
+      form.addEventListener('submit', formSend);
 
-    async function formSend(e) {
-      e.preventDefault();
+      async function formSend(e) {
+        e.preventDefault();
 
-      var error = formValidate(form);
-      var formData = new FormData(form);
+        var error = formValidate(form);
+        var formData = new FormData(form);
 
-      if (error === 0) {
-        form.classList.add('_sending');
-        var response = await fetch(url, {
-          method: 'POST',
-          body: formData
-        });
-        if (response.ok) {
-          // alert('Форма успешно отправлена');
-          onFormSuccess(form);
-          form.reset();
-          form.classList.remove('_sending');
-        } else {
-          alert('Произошла ошибка при отправке формы');
-          form.classList.remove('_sending');
-        }
-
-      } else {
-        // alert('заполните обязательные поля');
-      }
-    }
-
-    function formValidate(form) {
-      var error = 0;
-      var formReq = form.querySelectorAll('input[required]');
-
-      for (var i = 0; i < formReq.length; i++) {
-        var input = formReq[i];
-        formRemoveError(input);
-
-        var inputType = input.getAttribute('type');
-
-        if (inputType === 'email') {
-          if (emailTest(input)) {
-            formAddError(input);
-            error++;
+        if (error === 0) {
+          form.classList.add('_sending');
+          var response = await fetch(url, {
+            method: 'POST',
+            body: formData
+          });
+          if (response.ok) {
+            // alert('Форма успешно отправлена');
+            onFormSuccess(form);
+            form.reset();
+            form.classList.remove('_sending');
+          } else {
+            alert('Произошла ошибка при отправке формы');
+            form.classList.remove('_sending');
           }
+
         } else {
+          // alert('заполните обязательные поля');
+        }
+      }
+
+      function formValidate(form) {
+        var error = 0;
+        var formReq = form.querySelectorAll('input[required]');
+
+        for (var i = 0; i < formReq.length; i++) {
+          var input = formReq[i];
+          formRemoveError(input);
+
+          var inputType = input.getAttribute('type');
+
+          if (inputType === 'email') {
+            if (emailTest(input)) {
+              formAddError(input);
+              error++;
+            }
+          } else {
             if (input.value === '') {
               formAddError(input);
               error++;
@@ -415,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function() {
         bodyLock();
       }
       curentPopup.classList.add('open');
-      curentPopup.addEventListener("click", function (e) {
+      curentPopup.addEventListener("click", function(e) {
         if (!e.target.closest('.popup__content')) {
           popupClose(e.target.closest('.popup'));
         }
@@ -449,7 +448,7 @@ document.addEventListener('DOMContentLoaded', function() {
     body.classList.add('lock');
 
     unlock = false;
-    setTimeout(function () {
+    setTimeout(function() {
       unlock = true;
     }, timeout);
   }
@@ -457,7 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function bodyUnLock() {
     var lockPadding = document.querySelectorAll('.lock-padding');
     var scrollUp = document.querySelector('#scrollUp');
-    setTimeout(function () {
+    setTimeout(function() {
       if (lockPadding.length > 0) {
         lockPadding.forEach(function(el) {
           el.style.paddingRight = '0';
@@ -471,23 +470,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }, timeout);
 
     unlock = false;
-    setTimeout(function () {
+    setTimeout(function() {
       unlock = true;
     }, timeout);
   }
 
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keydown', function(e) {
     if (e.which === 27) {
       var popupActive = document.querySelector('.popup.open');
       popupClose(popupActive);
     }
   });
 
-  (function () {
+  (function() {
     // проверяем поддержку
     if (!Element.prototype.closest) {
       // реализуем
-      Element.prototype.closest = function (css) {
+      Element.prototype.closest = function(css) {
         var node = this;
         while (node) {
           if (node.matches(css)) return node;
@@ -497,7 +496,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
     }
   })();
-  (function () {
+  (function() {
     // проверяем поддержку
     if (!Element.prototype.matches) {
       // определяем свойство
@@ -517,7 +516,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var myMapTemp, myPlacemarkTemp;
 
 
-  function init () {
+  function init() {
     var myMapTemp = new ymaps.Map("map-yandex", {
       center: [55.730138, 37.594238],
       zoom: 7,
@@ -525,18 +524,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     var myPlacemarkTemp = new ymaps.Placemark([55.730138, 37.594238], {
-        balloonContent: "Здесь может быть ваш адрес",
+      balloonContent: "Здесь может быть ваш адрес",
     }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#imageWithContent',
-        // Своё изображение иконки метки.
-        iconImageHref: '../images/map/map-marker.png',
-        // Размеры метки.
-        iconImageSize: [50, 50],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-25, -50],
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: '../images/map/map-marker.png',
+      // Размеры метки.
+      iconImageSize: [50, 50],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-25, -50],
     });
 
     myMapTemp.geoObjects.add(myPlacemarkTemp);
@@ -559,9 +558,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function waitForTilesLoad(layer) {
-    return new ymaps.vow.Promise(function (resolve, reject) {
-      var tc = getTileContainer(layer), readyAll = true;
-      tc.tiles.each(function (tile, number) {
+    return new ymaps.vow.Promise(function(resolve, reject) {
+      var tc = getTileContainer(layer),
+        readyAll = true;
+      tc.tiles.each(function(tile, number) {
         if (!tile.isReady()) {
           readyAll = false;
         }
@@ -580,8 +580,8 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var k in layer) {
       if (layer.hasOwnProperty(k)) {
         if (
-          layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
-          || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+          layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer ||
+          layer[k] instanceof ymaps.layer.tileContainer.DomContainer
         ) {
           return layer[k];
         }
@@ -590,20 +590,20 @@ document.addEventListener('DOMContentLoaded', function() {
     return null;
   }
 
-  function loadScript(url, callback){
+  function loadScript(url, callback) {
 
     var script = document.createElement("script");
 
-    if (script.readyState){  //IE
-      script.onreadystatechange = function(){
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
         if (script.readyState == "loaded" ||
-                script.readyState == "complete"){
+          script.readyState == "complete") {
           script.onreadystatechange = null;
           callback();
         }
       };
-    } else {  //Другие браузеры
-      script.onload = function(){
+    } else { //Другие браузеры
+      script.onload = function() {
         callback();
       };
     }
@@ -613,20 +613,60 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   var ymap = function() {
-    $('.ymap-container').mouseenter(function(){
-        if (check_if_load == 0) {
-          check_if_load = 1;
+    $('.ymap-container').mouseenter(function() {
+      if (check_if_load == 0) {
+        check_if_load = 1;
 
-          spinner.addClass('is-active');
+        spinner.addClass('is-active');
 
-          loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
-             ymaps.load(init);
-          });
+        loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function() {
+          ymaps.load(init);
+        });
 
-        }
       }
-    );
+    });
   }
   //Map Yandex
   ymap();
 });
+
+(function() {
+  "use strict"
+  // lazy load images
+  const lazyImages = document.querySelectorAll('img[data-src],source[data-srcset]');
+  const windowHeight = document.documentElement.clientHeight;
+
+  let lazyImagesPositions = [];
+  if (lazyImages.length > 0) {
+    lazyImages.forEach(img => {
+      if (img.dataset.src || img.dataset.srcset) {
+        lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset);
+        lazyScrollCheck();
+      }
+    });
+  }
+
+  window.addEventListener("scroll", lazyScroll);
+
+  function lazyScroll() {
+    if (document.querySelectorAll('img[data-src],source[data-srcset]').length > 0) {
+      lazyScrollCheck();
+    }
+  }
+
+  function lazyScrollCheck() {
+    let imgIndex = lazyImagesPositions.findIndex(
+      item => pageYOffset > item - windowHeight
+    );
+    if (imgIndex >= 0) {
+      if (lazyImages[imgIndex].dataset.src) {
+        lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+        lazyImages[imgIndex].removeAttribute('data-src');
+      } else if (lazyImages[imgIndex].dataset.srcset) {
+        lazyImages[imgIndex].srcset = lazyImages[imgIndex].dataset.srcset;
+        lazyImages[imgIndex].removeAttribute('data-srcset');
+      }
+      delete lazyImagesPositions[imgIndex];
+    }
+  }
+})();

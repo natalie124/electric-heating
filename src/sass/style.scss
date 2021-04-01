@@ -197,6 +197,11 @@ img {
   max-width: 100%;
 }
 
+.img-lazy {
+  position: relative;
+  background: url("../images/icons/loading.gif") center / 50px no-repeat;
+}
+
 /*--
     - Common Classes
 -----------------------------------------*/

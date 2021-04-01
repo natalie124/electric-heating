@@ -11,20 +11,35 @@ mixin img-jpg( name, width, height, alt )
 mixin img-png( name, width, height, alt )
   img( src="images/" + name + ".png" srcset="images/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
 
-mixin picture-jpg-webp( name, width, height, alt, className )
-  picture
-    source(type="image/webp" srcset="images/webp/" + name + ".webp")
-    img( class="" + className src="images/" + name + ".jpg" width=("" + width) height=("" + height) alt="" + alt )
+//- mixin picture-jpg-webp( name, width, height, alt, className )
+//-   picture
+//-     source(type="image/webp" srcset="images/webp/" + name + ".webp")
+//-     img( class="" + className src="images/" + name + ".jpg" width=("" + width) height=("" + height) alt="" + alt )
+
+//- mixin picture-png-webp( name, width, height, alt, className )
+//-   picture
+//-     source(type="image/webp" srcset="images/webp/" + name + ".webp")
+//-     img( class="" + className src="images/" + name + ".png" width=("" + width) height=("" + height) alt="" + alt )
 
 mixin picture-png-webp( name, width, height, alt, className )
   picture
-    source(type="image/webp" srcset="images/webp/" + name + ".webp")
-    img( class="" + className src="images/" + name + ".png" width=("" + width) height=("" + height) alt="" + alt )
+    source(class="img-lazy" type="image/webp" src="images/icons/1x1.png" data-srcset="images/webp/" + name + ".webp")
+    img( class="img-lazy " + className src="images/icons/1x1.png" data-src="images/" + name + ".png" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-jpg-webp( name, width, height, alt, className )
+  picture
+    source(class="img-lazy" type="image/webp" src="images/icons/1x1.png"  data-srcset="images/webp/" + name + ".webp")
+    img( class="img-lazy " + className  src="images/icons/1x1.png" data-src="images/" + name + ".jpg" width=("" + width) height=("" + height) alt="" + alt )
 
 mixin pl-webp( name, width, height, className )
   picture
-    source(type="image/webp" srcset="" + name + ".webp")
-    img( class="" + className src="" + name + ".png" width=("" + width) height=("" + height) alt="pl" )
+    source( class="img-lazy" type="image/webp" src="images/icons/1x1.png" data-srcset="" + name + ".webp")
+    img( class="img-lazy " + className src="images/icons/1x1.png" data-src="" + name + ".png" width=("" + width) height=("" + height) alt="pl" )
+
+//- mixin pl-webp( name, width, height, className )
+//-   picture
+//-     source(type="image/webp" srcset="" + name + ".webp")
+//-     img( class="" + className src="" + name + ".png" width=("" + width) height=("" + height) alt="pl" )
 
 mixin title-image-bg
   // Breadcrumb Section Start
