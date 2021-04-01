@@ -189,7 +189,6 @@
     var selector = '._anchor[data-anchor=' + _href + ']';
     var toElem = $(selector);
     var toTop = toElem.offset().top;
-    console.log(toTop);
     $("html, body").animate({ scrollTop: toTop - toElem.height() - 70 });
     return false;
   });
@@ -399,7 +398,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (popupCloseBtns.length > 0) {
     popupCloseBtns.forEach(function(popupCloseBtn) {
       popupCloseBtn.addEventListener('click', function() {
-        console.log(popupCloseBtn);
         popupClose(popupCloseBtn.closest('.popup'));
       });
     });
