@@ -41,7 +41,34 @@
 /*  01. Theme default CSS
 /*----------------------------------------*/
 /*-- Google Font --*/
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700");
+@font-face {
+    font-family: "Lato";
+    src: url("../../fonts/lato.woff2") format("woff2")б url(../../fonts/lato.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("../../fonts/lato-bold.woff2") format("woff2")б url(../../fonts/lato-bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Мontserrat";
+    src: url("../../fonts/montserrat.woff2") format("woff2")б url(../../fonts/montserrat.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Мontserrat";
+    src: url("../../fonts/montserrat-bold.woff2") format("woff2")б url(../../fonts/montserrat-bold.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 /*-- Common Style --*/
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
