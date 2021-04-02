@@ -638,8 +638,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (lazyImages.length > 0) {
     lazyImages.forEach(img => {
       if (img.dataset.src || img.dataset.srcset) {
-        lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset);
+        lazyImagesPositions.push(img.getBoundingClientRect().top + pageYOffset - 300);
         lazyScrollCheck();
+        // console.log(img);
       }
     });
   }
