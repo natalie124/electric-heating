@@ -25,11 +25,20 @@ mixin picture-png-webp( name, width, height, alt, className )
   picture
     source(class="img-lazy" type="image/webp" srcset="images/icons/1x1.png" data-srcset="images/webp/" + name + ".webp")
     img( class="img-lazy " + className src="images/icons/1x1.png" data-src="images/" + name + ".png" width=("" + width) height=("" + height) alt="" + alt )
+mixin picture-png-webp-nl( name, width, height, alt, className )
+  picture
+    source( type="image/webp" srcset="images/webp/" + name + ".webp")
+    img( class="" + className src="images/" + name + ".png" width=("" + width) height=("" + height) alt="" + alt )
 
 mixin picture-jpg-webp( name, width, height, alt, className )
   picture
     source(class="img-lazy" type="image/webp" srcset="images/icons/1x1.png"  data-srcset="images/webp/" + name + ".webp")
     img( class="img-lazy " + className  src="images/icons/1x1.png" data-src="images/" + name + ".jpg" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-jpg-webp-nl( name, width, height, alt, className )
+  picture
+    source( type="image/webp" srcset="images/webp/" + name + ".webp")
+    img( class=" " + className src="images/" + name + ".jpg" width=("" + width) height=("" + height) alt="" + alt )
 
 mixin pl-webp( name, width, height, className )
   picture
@@ -43,7 +52,8 @@ mixin pl-webp( name, width, height, className )
 
 mixin title-image-bg
   // Breadcrumb Section Start
-  .breadcrumb-section.section.bg-image.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45(data-bg='images/bg/page_heading_bg01.jpg')
+  .breadcrumb-section.section.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45.bg-item
+    +picture-jpg-webp-nl('bg/page_heading_bg01', 1920, 500, '1', 'bg-img')
     .container
       .row.align-items-center
         .col-md-12
@@ -60,7 +70,8 @@ mixin title-image-bg
 
 mixin title-image-bg-about
   // Breadcrumb Section Start
-  .breadcrumb-section.section.bg-image.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45(data-bg='images/bg/page_heading_bg01.jpg')
+  .breadcrumb-section.section.overlay.pt-75.pb-75.pt-sm-55.pb-sm-55.pt-xs-45.pb-xs-45
+    +picture-jpg-webp-nl('bg/page_heading_bg01', 1920, 500, '1', 'bg-img')
     .container
       .row.align-items-center
         .col-md-12
@@ -79,7 +90,8 @@ mixin title-image-bg-about
 
 mixin title-big-image-bg( pageTitle )
   // Breadcrumb Section Start
-  .breadcrumb-section.section.bg-image.overlay.pt-50.pt-md-50.pb-100.pb-md-100.pt-sm-50.pb-sm-70.pt-xs-50.pb-xs-50(data-bg='images/bg/about_page_title_bg.jpg')
+  .breadcrumb-section.section.overlay.pt-50.pt-md-50.pb-100.pb-md-100.pt-sm-50.pb-sm-70.pt-xs-50.pb-xs-50
+    +picture-jpg-webp-nl('bg/about_page_title_bg', 1920, 600, '1', 'bg-img')
     .container
       .row.align-items-center
         .col-md-12

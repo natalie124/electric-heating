@@ -7,7 +7,8 @@ block content
 
   main
     .hero-section.section.position-relative
-      .hero-item.bg-image(data-bg='images/hero/hero-3.jpg')
+      .hero-item.bg-item
+        +picture-jpg-webp-nl('hero/hero-3', 1920, 655, 'slide', 'bg-img')
         .container
           .row.align-items-center
             .col-md-12

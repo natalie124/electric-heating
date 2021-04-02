@@ -1,5 +1,6 @@
 /*-- Hero Item --*/
 .hero-item {
+  position: relative;
   width: 100%;
   min-height: 650px;
   -webkit-box-align: center;
@@ -20,6 +21,7 @@
   background-position: center center;
   z-index: 1;
 }
+
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
   .hero-item {
     min-height: 550px;
