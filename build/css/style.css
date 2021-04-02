@@ -5281,6 +5281,10 @@ header.header.is-sticky .main-menu.main-menu-two {
   cursor: pointer;
 }
 
+.ymap-container img {
+  z-index: 1;
+}
+
 .map-yandex {
   cursor: pointer;
   height: 20em;

@@ -11,6 +11,10 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
+
+  img {
+    z-index: 1;
+  }
 }
 .map-yandex {
   cursor: pointer;
